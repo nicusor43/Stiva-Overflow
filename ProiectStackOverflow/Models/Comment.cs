@@ -11,7 +11,9 @@ namespace ProiectStackOverflow.Models
 		[Required(ErrorMessage = "Content is mandatory")]
 		public string Content { get; set; }
 		public DateTime Date { get; set; }
-		public int? QuestionId { get; set; }
+        public string? UserId { get; set; }
+        public int? QuestionId { get; set; }
+        public virtual ApplicationUser? User { get; set; }
 		public virtual Question? Question { get; set; }
 	}
 }

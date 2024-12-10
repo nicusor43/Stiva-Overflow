@@ -144,3 +144,4 @@ C:\Users\lenovo\OneDrive\Documents\info\GitHub\Proiect_ASP.Net\ProiectStackOverf
 C:\Users\lenovo\OneDrive\Documents\info\GitHub\Proiect_ASP.Net\ProiectStackOverflow\obj\Debug\net8.0\ProiectStackOverflow.pdb
 C:\Users\lenovo\OneDrive\Documents\info\GitHub\Proiect_ASP.Net\ProiectStackOverflow\obj\Debug\net8.0\ProiectStackOverflow.genruntimeconfig.cache
 C:\Users\lenovo\OneDrive\Documents\info\GitHub\Proiect_ASP.Net\ProiectStackOverflow\obj\Debug\net8.0\ref\ProiectStackOverflow.dll
+C:\Users\lenovo\OneDrive\Documents\info\GitHub\Proiect_ASP.Net\ProiectStackOverflow\obj\Debug\net8.0\ProiectStackOverflow.sourcelink.json

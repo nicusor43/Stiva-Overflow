@@ -4,10 +4,10 @@ using ProiectStackOverflow.Models;
 
 namespace ProiectStackOverflow.Data
 {
-	public class ApplicationDbContext : IdentityDbContext
-	{
-		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-			: base(options)
+	public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext>options)
+            : base(options)
 		{
 		}
 		public DbSet<Question> Questions { get; set; }

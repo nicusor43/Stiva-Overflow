@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\users\\lenovo\\onedrive\\documents\\info\\github\\proiect_asp.net\\proiectstackoverflow\\views\\questions\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:views\\questions\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\users\\lenovo\\onedrive\\documents\\info\\github\\proiect_asp.net\\proiectstackoverflow\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\users\\lenovo\\onedrive\\documents\\info\\github\\proiect_asp.net\\proiectstackoverflow\\controllers\\questionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:controllers\\questionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\users\\lenovo\\onedrive\\documents\\info\\github\\proiect_asp.net\\proiectstackoverflow\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\users\\lenovo\\onedrive\\documents\\info\\github\\proiect_asp.net\\proiectstackoverflow\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\users\\lenovo\\onedrive\\documents\\info\\github\\proiect_asp.net\\proiectstackoverflow\\models\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:models\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\users\\lenovo\\onedrive\\documents\\info\\github\\proiect_asp.net\\proiectstackoverflow\\models\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:models\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\users\\lenovo\\onedrive\\documents\\info\\github\\proiect_asp.net\\proiectstackoverflow\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\users\\lenovo\\onedrive\\documents\\info\\github\\proiect_asp.net\\proiectstackoverflow\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\users\\lenovo\\onedrive\\documents\\info\\github\\proiect_asp.net\\proiectstackoverflow\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,55 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-10T12:07:46.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Models\\SeedData.cs",
+              "RelativeDocumentMoniker": "Models\\SeedData.cs",
+              "ToolTip": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Models\\SeedData.cs",
+              "RelativeToolTip": "Models\\SeedData.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwDkAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T11:46:22.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T11:43:21.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Answer.cs",
               "DocumentMoniker": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Models\\Answer.cs",
               "RelativeDocumentMoniker": "Models\\Answer.cs",
               "ToolTip": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Models\\Answer.cs",
               "RelativeToolTip": "Models\\Answer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T07:19:52.592Z"
+              "WhenOpened": "2024-12-10T11:40:41.566Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "Models\\Comment.cs",
+              "ToolTip": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Models\\Comment.cs",
+              "RelativeToolTip": "Models\\Comment.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T11:40:20.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "Models\\ApplicationUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T10:04:25.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Question.cs",
               "DocumentMoniker": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Models\\Question.cs",
               "RelativeDocumentMoniker": "Models\\Question.cs",
               "ToolTip": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Models\\Question.cs",
               "RelativeToolTip": "Models\\Question.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAkwBkAAAArAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAkwBMAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T07:13:29.329Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "QuestionsController.cs",
-              "DocumentMoniker": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Controllers\\QuestionsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\QuestionsController.cs",
-              "ToolTip": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Controllers\\QuestionsController.cs",
-              "RelativeToolTip": "Controllers\\QuestionsController.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAUwCQAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T19:10:04.612Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Show.cshtml",
-              "DocumentMoniker": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Questions\\Show.cshtml",
-              "RelativeDocumentMoniker": "Views\\Questions\\Show.cshtml",
-              "ToolTip": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Questions\\Show.cshtml",
-              "RelativeToolTip": "Views\\Questions\\Show.cshtml",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAAAMsAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-08T18:21:56.776Z",
+              "WhenOpened": "2024-12-10T11:08:10.956Z",
               "EditorCaption": ""
             }
           ]
