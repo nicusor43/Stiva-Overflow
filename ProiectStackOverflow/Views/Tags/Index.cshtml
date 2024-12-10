@@ -1,0 +1,28 @@
+﻿@{
+	ViewBag.Title = "Tags";
+}
+
+<h3 class="text">Tags</h3>
+<p>
+	A tag is a keyword or label that categorizes your question with other, similar questions.
+	<br />Using the right tags makes it easier for others to find and answer your question.
+</p>
+<br />
+
+<div class="row">
+	@foreach (var tag in ViewBag.Tags)
+	{
+		<div class="col-sm-3 border mb-3 m-3">
+			<a class="btn btn-secondary m-2" href="/Questions/Index/@tag.Id">@tag.TagName</a>
+			<div>@tag.Description</div>
+		</div>
+	}
+</div>
+
+<br />
+<br />
+<br />
+
+<div class="d-flex justify-content-around">
+	<a class="btn btn-warning" href="/Questions/New">Ask question</a>
+</div>

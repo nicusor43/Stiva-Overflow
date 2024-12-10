@@ -1,0 +1,30 @@
+﻿@{
+	ViewBag.Title = "Questions";
+}
+
+<h3>[@ViewBag.Tag.TagName]</h3>
+<p>@ViewBag.Tag.Description</p>
+
+@if (ViewBag.Message != null)
+{
+	<h2 class="alert-success p-3 rounded-3 text-center mb-5">@ViewBag.Message</h2>
+}
+
+@foreach (var q in ViewBag.Questions)
+{
+	<div class="card">
+		<div class="card-body">
+			<h3 class="card-title alert-secondary p-3 rounded-2">
+				<a href="/Questions/Show/@q.Id" style="color: inherit; text-decoration: none;">@q.Title</a>
+			</h3>
+			<div class="card-text description">@q.Content</div>
+			<div class="d-flex justify-content-between flex-row mt-5">
+
+				<div> @q.Tag.TagName</div>
+
+				<span class="alert-info px-1 align-content-center">@q.Date</span>
+
+			</div>
+		</div>
+	</div>
+}

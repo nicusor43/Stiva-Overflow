@@ -1,0 +1,28 @@
+﻿@model ProiectStackOverflow.Models.Answer
+
+<h2 class="text-center mt-5">Edit answer</h2>
+
+<br />
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-3">
+
+            <form method="post" asp-action="Edit" asp-controller="Answers" asp-route-id="@Model.Id">
+
+                <div class="form-group">
+                    <label asp-for="Content" class="form-label">Content</label>
+                    <br />
+                    <textarea asp-for="Content" class="form-control"></textarea>
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                    <br /><br />
+                </div>
+
+                <button class="btn btn-sm btn-primary" type="submit">Edit answer</button>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+

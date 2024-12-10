@@ -1,0 +1,44 @@
+﻿@model ProiectStackOverflow.Models.Question
+
+<h2 class="text-center mt-5">Edit question</h2>
+
+<br />
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-3">
+
+            <form method="post" asp-action="Edit" asp-controller="Questions" asp-route-id="@Model.Id">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Title" class="form-label">Title</label>
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                    <input asp-for="Title" class="form-control" />
+                    <br /><br />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Content" class="form-label">Content</label>
+                    <br />
+                    <textarea asp-for="Content" class="form-control"></textarea>
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                    <br /><br />
+                </div>
+
+                <div class="form-group">
+                    <label for="TagId">Choose tag</label>
+                    <br />
+                    <select asp-for="TagId" asp-items="Model.T" class="form-control">
+                        <option value="">Choose tag</option>
+                    </select>
+                    <br />
+                </div>
+
+                <button class="btn btn-sm btn-success" type="submit">Edit question</button>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
