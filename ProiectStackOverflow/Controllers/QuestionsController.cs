@@ -3,19 +3,31 @@ using ProiectStackOverflow.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace ProiectStackOverflow.Controllers
 {
 	public class QuestionsController : Controller
 	{
-		private readonly ApplicationDbContext db;
-		public QuestionsController(ApplicationDbContext context)
-		{
-			db = context;
-		}
+        private readonly ApplicationDbContext db;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        public QuestionsController(
+        ApplicationDbContext context,
+        UserManager<ApplicationUser> userManager,
+        RoleManager<IdentityRole> roleManager
+        )
+        {
+            db = context;
+            _userManager = userManager;
+            _roleManager = roleManager;
+        }
+
+        [Authorize(Roles = "Admin, User")]
 		public IActionResult Index(int id)
 		{
-			var questions = from question in db.Questions.Include("Tag")
+			var questions = from question in db.Questions.Include("Tag").Include("User")
 							where question.TagId == id
 							select question;
 
@@ -26,22 +38,28 @@ namespace ProiectStackOverflow.Controllers
 
 			if (TempData.ContainsKey("message"))
 			{
-				ViewBag.Message = TempData["message"];
+				//ViewBag.Message = TempData["message"];
+				//ViewBag.Alert = TempData["messageType"];
 			}
 
 			return View();
 		}
 
-		public IActionResult Show(int id)
+        [Authorize(Roles = "Admin, User")]
+        public IActionResult Show(int id)
 		{
-			Question question = db.Questions.Include("Tag").Include("Comments").Include("Answers")
+			Question question = db.Questions.Include("Tag").Include("Comments")
+							  .Include("Answers").Include("User").Include("Comments.User")
                               .Where(q => q.Id == id)
 							  .First();
+
+			SetAccesRights();
 
 			return View(question);
 		}
 
-		public IActionResult New()
+        [Authorize(Roles = "Admin, User")]
+        public IActionResult New()
 		{
 			Question question = new Question();
 
@@ -50,25 +68,30 @@ namespace ProiectStackOverflow.Controllers
 			return View(question);
 		}
 
-		[HttpPost]
+        [Authorize(Roles = "Admin, User")]
+        [HttpPost]
 		public IActionResult New(Question question)
 		{
             question.Date = DateTime.Now;
-            question.T = GetAllTags();
+
+			question.UserId = _userManager.GetUserId(User);
 
 			if (ModelState.IsValid)
 			{
 				db.Questions.Add(question);
 				db.SaveChanges();
 
-				TempData["message"] = "Articolul a fost adaugat";
+				//TempData["message"] = "Articolul a fost adaugat";
+				//TempData["messageType"] = "alert-success";
 				return RedirectToAction("Index", new { id = question.TagId });
 			}
 			else
 			{
-				return View(question);
+                question.T = GetAllTags();
+                return View(question);
 			}
 		}
+		[Authorize(Roles = "Admin, User")]
 		public IActionResult Edit(int id)
 		{
 			Question question = db.Questions.Include("Tag")
@@ -77,22 +100,43 @@ namespace ProiectStackOverflow.Controllers
 
 			question.T = GetAllTags();
 
-			return View(question);
+			if(question.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
+			{
+				return View(question);
+			}
+			else
+			{
+				question.T = GetAllTags();
+				//TempData["message"] = "Nu aveti dreptul sa faceti modificari";
+				//TempData["messageType"] = "alert-danger";
+				return RedirectToAction("Show", new { id = id });
+			}
 		}
 
 		[HttpPost]
+		[Authorize(Roles = "Admin, User")]
 		public IActionResult Edit(int id, Question requestQuestion)
 		{
 			Question question = db.Questions.Find(id);
 
 			if (ModelState.IsValid)
 			{
-				question.Title = requestQuestion.Title;
-				question.Content = requestQuestion.Content;
-				question.TagId = requestQuestion.TagId;
-				TempData["message"] = "Articolul a fost modificat";
-				db.SaveChanges();
-				return RedirectToAction("Show", new { id = id });
+				if (question.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
+				{
+					question.Title = requestQuestion.Title;
+					question.Content = requestQuestion.Content;
+					question.TagId = requestQuestion.TagId;
+					//TempData["message"] = "Articolul a fost modificat";
+					//TempData["messageType"] = "alert-success";
+					db.SaveChanges();
+					return RedirectToAction("Show", new { id = id });
+				}
+				else
+				{
+					//TempData["message"] = "Nu aveti dreptul sa faceti modificari";
+					//TempData["messageType"] = "alert-danger";
+					return RedirectToAction("Show", new { id = id });
+				}
 			}
 			else
 			{
@@ -106,11 +150,30 @@ namespace ProiectStackOverflow.Controllers
 		public ActionResult Delete(int id)
 		{
 			Question question = db.Questions.Find(id);
-			var tag = question.TagId;
-			db.Questions.Remove(question);
-			db.SaveChanges();
-			return RedirectToAction("Index", new { id = tag });
+
+			if (question.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
+			{
+				var tag = question.TagId;
+				db.Questions.Remove(question);
+				db.SaveChanges();
+				//TempData["message"] = "Articolul a fost sters";
+				//TempData["messageType"] = "alert-success";
+				return RedirectToAction("Index", new { id = tag });
+			}
+			else
+			{
+				//TempData["message"] = "Nu aveti dreptul sa stergeti";
+				//TempData["messageType"] = "alert-danger";
+				return RedirectToAction("Show", new { id = id });
+			}
 		}
+
+		private void SetAccesRights()
+		{
+			ViewBag.UserCurent = _userManager.GetUserId(User);
+			ViewBag.Admin = User.IsInRole("Admin");
+		}
+
 		[NonAction]
 		public IEnumerable<SelectListItem> GetAllTags()
 		{
@@ -131,9 +194,13 @@ namespace ProiectStackOverflow.Controllers
 
 		//Pentru comentarii
 		[HttpPost]
-		public IActionResult ShowComm([FromForm] Comment comment)
+        [Authorize(Roles = "Admin, User")]
+        public IActionResult ShowComm([FromForm] Comment comment)
 		{
 			comment.Date = DateTime.Now;
+
+			comment.UserId = _userManager.GetUserId(User);
+
 			if (ModelState.IsValid)
 			{
 				db.Comments.Add(comment);
@@ -142,15 +209,23 @@ namespace ProiectStackOverflow.Controllers
 			}
 			else
 			{
-                return RedirectToAction("Show", new { id = comment.QuestionId });
+				Question q = db.Questions.Include("Tag").Include("User")
+							.Include("Comments").Include("Answers")
+							.Include("Comment.User")
+							.Where(q => q.Id == comment.QuestionId).First();
+				SetAccesRights();
+                return View(q);
             }
 		}
 
         //Pentru raspunsuri
         [HttpPost]
+        [Authorize(Roles = "Admin, User")]
         public IActionResult ShowAns([FromForm] Answer answer)
         {
             answer.Date = DateTime.Now;
+            answer.UserId = _userManager.GetUserId(User);
+
             if (ModelState.IsValid)
             {
                 db.Answers.Add(answer);
@@ -159,7 +234,12 @@ namespace ProiectStackOverflow.Controllers
             }
             else
             {
-                return RedirectToAction("Show", new { id = answer.QuestionId });
+                Question q = db.Questions.Include("Tag").Include("User")
+                            .Include("Comments").Include("Answers")
+                            .Include("Comment.User")
+                            .Where(q => q.Id == answer.QuestionId).First();
+                SetAccesRights();
+                return View(q);
             }
         }
     }

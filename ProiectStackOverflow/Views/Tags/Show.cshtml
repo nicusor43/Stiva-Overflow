@@ -1,0 +1,30 @@
+﻿@model ProiectStackOverflow.Models.Tag
+
+@{
+    ViewBag.Title = "Show Tag";
+}
+
+
+<h2>@ViewBag.Title</h2>
+
+<br />
+
+<h3>[@Model.TagName]</h3>
+<p>@Model.Description</p>
+
+
+<form method="post" asp-controller="Tags" asp-action="Delete"
+      asp-route-id="@Model.Id">
+
+    <button class="btn btn-danger" type="submit">Delete</button>
+
+</form>
+
+<br />
+
+<a class="btn alert-warning" href="/Tags/Index/">Tags</a>
+
+<br />
+<hr />
+<br />
+

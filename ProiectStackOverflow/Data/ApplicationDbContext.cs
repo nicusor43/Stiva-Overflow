@@ -10,6 +10,8 @@ namespace ProiectStackOverflow.Data
             : base(options)
 		{
 		}
+
+		public DbSet<ApplicationUser> User { get; set; }
 		public DbSet<Question> Questions { get; set; }
 		public DbSet<Tag> Tags { get; set; }
 		public DbSet<Comment> Comments { get; set; }

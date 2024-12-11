@@ -21,17 +21,20 @@
 
     <hr />
 
-    <div class="d-flex flex-row justify-content-between">
+    @if(Model.UserId == ViewBag.UserCurent || ViewBag.Admin)
+    {
+        <div class="d-flex flex-row justify-content-between">
 
-        <a class="btn btn-warning" href="/Questions/Edit/@Model.Id">Edit</a>
+            <a class="btn btn-warning" href="/Questions/Edit/@Model.Id">Edit</a>
 
-        <form method="post" asp-controller="Questions" asp-action="Delete" asp-route-id="@Model.Id">
+            <form method="post" asp-controller="Questions" asp-action="Delete" asp-route-id="@Model.Id">
 
-            <button class="btn btn-danger" type="submit">Delete</button>
+                <button class="btn btn-danger" type="submit">Delete</button>
 
-        </form>
+            </form>
 
-    </div>
+        </div>
+    }
 
 </div>
 
@@ -60,29 +63,33 @@
 
                     <p>@comm.Content</p>
                     <small>@comm.Date</small>
+                    <strong><i class="bi bi-person"></i>@comm.User.UserName</strong>
 
                 </div>
                 <br>
 
-                <div class="d-flex">
+                @if(comm.UserId == ViewBag.UserCurent || ViewBag.Admin)
+                {
+                    <div class="d-flex">
 
-                    <div>
+                        <div>
 
-                        <a class="btn btn-outline-primary" href="/Comments/Edit/@comm.Id"><i class="bi bi-pencil-square"></i>Edit</a>
+                            <a class="btn btn-outline-primary" href="/Comments/Edit/@comm.Id"><i class="bi bi-pencil-square"></i>Edit</a>
+
+                        </div>
+
+                        <div>
+
+                            <form method="post" asp-controller="Comments" asp-action="Delete" asp-route-id="@comm.Id">
+
+                                <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i>Delete</button>
+
+                            </form>
+
+                        </div>
 
                     </div>
-
-                    <div>
-
-                        <form method="post" asp-controller="Comments" asp-action="Delete" asp-route-id="@comm.Id">
-
-                            <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i>Delete</button>
-
-                        </form>
-
-                    </div>
-
-                </div>
+                }
 
                 <br />
 
@@ -151,29 +158,33 @@
 
                     <p>@ans.Content</p>
                     <small>@ans.Date</small>
+                    <strong><i class="bi bi-person"></i>@ans.User.UserName</strong>
 
                 </div>
                 <br>
 
-                <div class="d-flex">
+                @if (ans.UserId == ViewBag.UserCurent || ViewBag.Admin)
+                {
+                    <div class="d-flex">
 
                     <div>
 
                         <a class="btn btn-outline-primary" href="/Answers/Edit/@ans.Id"><i class="bi bi-pencil-square"></i>Edit</a>
 
+                        </div>
+
+                        <div>
+
+                            <form method="post" asp-controller="Answers" asp-action="Delete" asp-route-id="@ans.Id">
+
+                                <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i>Delete</button>
+
+                            </form>
+
+                        </div>
+
                     </div>
-
-                    <div>
-
-                        <form method="post" asp-controller="Answers" asp-action="Delete" asp-route-id="@ans.Id">
-
-                            <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i>Delete</button>
-
-                        </form>
-
-                    </div>
-
-                </div>
+                }
 
                 <br />
 

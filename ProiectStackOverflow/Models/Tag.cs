@@ -6,8 +6,8 @@ namespace ProiectStackOverflow.Models
 	{
 		[Key]
 		public int Id { get; set; }
-		public string TagName { get; set; }
-		public string Description { get; set; }
+		public string? TagName { get; set; }
+		public string? Description { get; set; }
 		public virtual ICollection<Question>? Questions { get; set; }
 	}
 }

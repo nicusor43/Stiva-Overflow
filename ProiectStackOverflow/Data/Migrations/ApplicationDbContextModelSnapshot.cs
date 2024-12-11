@@ -8,7 +8,7 @@ using ProiectStackOverflow.Data;
 
 #nullable disable
 
-namespace ProiectStackOverflow.Data.Migrations
+namespace ProiectStackOverflow.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -17,7 +17,7 @@ namespace ProiectStackOverflow.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.8")
+                .HasAnnotation("ProductVersion", "8.0.11")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -300,6 +300,7 @@ namespace ProiectStackOverflow.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<int?>("TagId")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
@@ -307,7 +308,6 @@ namespace ProiectStackOverflow.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -425,13 +425,13 @@ namespace ProiectStackOverflow.Data.Migrations
                 {
                     b.HasOne("ProiectStackOverflow.Models.Tag", "Tag")
                         .WithMany("Questions")
-                        .HasForeignKey("TagId");
-
-                    b.HasOne("ProiectStackOverflow.Models.ApplicationUser", "User")
-                        .WithMany("Questinos")
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("TagId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("ProiectStackOverflow.Models.ApplicationUser", "User")
+                        .WithMany("Questions")
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Tag");
 
@@ -444,7 +444,7 @@ namespace ProiectStackOverflow.Data.Migrations
 
                     b.Navigation("Comments");
 
-                    b.Navigation("Questinos");
+                    b.Navigation("Questions");
                 });
 
             modelBuilder.Entity("ProiectStackOverflow.Models.Question", b =>

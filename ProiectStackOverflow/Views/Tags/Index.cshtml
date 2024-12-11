@@ -9,12 +9,21 @@
 </p>
 <br />
 
+@if (TempData.ContainsKey("message"))
+{
+	<h1>@ViewBag.message</h1>
+}
+
 <div class="row">
 	@foreach (var tag in ViewBag.Tags)
 	{
 		<div class="col-sm-3 border mb-3 m-3">
 			<a class="btn btn-secondary m-2" href="/Questions/Index/@tag.Id">@tag.TagName</a>
 			<div>@tag.Description</div>
+			<br />
+			<a class="btn alert-warning" asp-controller="Tags" asp-action="Show" asp-route-id="@tag.Id">Show</a>
+			<a class="btn alert-info" asp-controller="Tags" asp-action="Edit" asp-route-id="@tag.Id">Edit</a>
+			<br />
 		</div>
 	}
 </div>
@@ -26,3 +35,6 @@
 <div class="d-flex justify-content-around">
 	<a class="btn btn-warning" href="/Questions/New">Ask question</a>
 </div>
+<br />
+<a class="btn btn-primary" asp-controller="Tags" asp-action="New">Add Tag</a>
+<br />

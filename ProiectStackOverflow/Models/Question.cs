@@ -14,8 +14,8 @@ namespace ProiectStackOverflow.Models
 		[Required(ErrorMessage = "Content is mandatory")]
 		public string Content { get; set; }
 		public DateTime Date { get; set; }
-		[Required(ErrorMessage = "Tag is required")]
 		public string? UserId { get; set; }
+        [Required(ErrorMessage = "Tag is required")]
         public int? TagId { get; set; }
         public virtual ApplicationUser? User { get; set; }
         public virtual Tag? Tag { get; set; }
