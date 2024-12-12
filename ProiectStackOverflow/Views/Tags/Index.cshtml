@@ -18,11 +18,14 @@
 	@foreach (var tag in ViewBag.Tags)
 	{
 		<div class="col-sm-3 border mb-3 m-3">
-			<a class="btn btn-secondary m-2" href="/Questions/Index/@tag.Id">@tag.TagName</a>
-			<div>@tag.Description</div>
+			<a class="btn alert-secondary m-2" href="/Questions/Index/@tag.Id">@tag.TagName</a>
+			<div class="description">@tag.Description</div>
 			<br />
-			<a class="btn alert-warning" asp-controller="Tags" asp-action="Show" asp-route-id="@tag.Id">Show</a>
-			<a class="btn alert-info" asp-controller="Tags" asp-action="Edit" asp-route-id="@tag.Id">Edit</a>
+			@if(ViewBag.Admin)
+			{
+				<a class="btn alert-warning" asp-controller="Tags" asp-action="Show" asp-route-id="@tag.Id">Show</a>
+				<a class="btn alert-info" asp-controller="Tags" asp-action="Edit" asp-route-id="@tag.Id">Edit</a>
+			}
 			<br />
 		</div>
 	}
@@ -33,8 +36,8 @@
 <br />
 
 <div class="d-flex justify-content-around">
-	<a class="btn btn-warning" href="/Questions/New">Ask question</a>
+	<a class="btn alert-warning" href="/Questions/New">Ask question</a>
 </div>
 <br />
-<a class="btn btn-primary" asp-controller="Tags" asp-action="New">Add Tag</a>
+<a class="btn alert-primary" asp-controller="Tags" asp-action="New">Add Tag</a>
 <br />

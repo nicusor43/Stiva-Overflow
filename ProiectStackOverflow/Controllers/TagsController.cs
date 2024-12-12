@@ -27,6 +27,7 @@ namespace ProiectStackOverflow.Controllers
 							 orderby tag.TagName
 							 select tag;
 			ViewBag.Tags = tags;
+			ViewBag.Admin = User.IsInRole("Admin");
 			return View();
 		}
 

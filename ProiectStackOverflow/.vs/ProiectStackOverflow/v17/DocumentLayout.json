@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\users\\lenovo\\onedrive\\documents\\info\\github\\proiect_asp.net\\proiectstackoverflow\\views\\questions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:views\\questions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\users\\lenovo\\onedrive\\documents\\info\\github\\proiect_asp.net\\proiectstackoverflow\\views\\tags\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:views\\tags\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\users\\lenovo\\onedrive\\documents\\info\\github\\proiect_asp.net\\proiectstackoverflow\\views\\tags\\new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:views\\tags\\new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\users\\lenovo\\onedrive\\documents\\info\\github\\proiect_asp.net\\proiectstackoverflow\\controllers\\answerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:controllers\\answerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\users\\lenovo\\onedrive\\documents\\info\\github\\proiect_asp.net\\proiectstackoverflow\\models\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:models\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\users\\lenovo\\onedrive\\documents\\info\\github\\proiect_asp.net\\proiectstackoverflow\\views\\questions\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:views\\questions\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,50 +24,27 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Questions\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Questions\\Index.cshtml",
-              "ToolTip": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Questions\\Index.cshtml",
-              "RelativeToolTip": "Views\\Questions\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAhAAAA",
+              "DocumentMoniker": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Tags\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Tags\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Tags\\Index.cshtml*",
+              "RelativeToolTip": "Views\\Tags\\Index.cshtml*",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACkAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T13:21:47.963Z",
+              "WhenOpened": "2024-12-12T09:52:47.254Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AnswersController.cs",
-              "DocumentMoniker": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Controllers\\AnswersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AnswersController.cs",
-              "ToolTip": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Controllers\\AnswersController.cs",
-              "RelativeToolTip": "Controllers\\AnswersController.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAkwFQAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T13:21:17.402Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "New.cshtml",
-              "DocumentMoniker": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Tags\\New.cshtml",
-              "RelativeDocumentMoniker": "Views\\Tags\\New.cshtml",
-              "ToolTip": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Tags\\New.cshtml",
-              "RelativeToolTip": "Views\\Tags\\New.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Show.cshtml",
+              "DocumentMoniker": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Questions\\Show.cshtml",
+              "RelativeDocumentMoniker": "Views\\Questions\\Show.cshtml",
+              "ToolTip": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Questions\\Show.cshtml*",
+              "RelativeToolTip": "Views\\Questions\\Show.cshtml*",
+              "ViewState": "AQIAAMAAAAAAAAAAAAAAANkAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T13:14:39.243Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Tag.cs",
-              "DocumentMoniker": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Models\\Tag.cs",
-              "RelativeDocumentMoniker": "Models\\Tag.cs",
-              "ToolTip": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Models\\Tag.cs",
-              "RelativeToolTip": "Models\\Tag.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T13:11:52.945Z"
+              "WhenOpened": "2024-12-12T09:51:27.52Z",
+              "EditorCaption": ""
             }
           ]
         }

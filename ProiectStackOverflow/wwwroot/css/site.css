@@ -22,7 +22,7 @@ body {
 }
 
 .navbar {
-    background-color: #ffbe76 !important;
+    background-color: #dfe4ea !important;
     border: none !important;
     box-shadow: 0 3px 12px #636e72 !important;
 }
@@ -32,7 +32,7 @@ a.nav-link {
 }
 
     a.nav-link:hover {
-        color: #EAB543 !important;
+        color: #57606f !important;
     }
 
 .logoutbtn {
@@ -40,7 +40,7 @@ a.nav-link {
 }
 
     .logoutbtn:hover {
-        color: #EAB543 !important;
+        color: #57606f !important;
     }
 
 .note-editor .dropdown-toggle::after {
@@ -60,7 +60,7 @@ a.nav-link {
 }
 
     .font-logo:hover {
-        color: #EAB543 !important;
+        color: #57606f !important;
     }
 
 .footer-position {

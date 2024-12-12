@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProiectStackOverflow")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+abc09b7b9482b838779e7a5ba35e7e4a4218c123")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f319fdc3f1ff8e6e20f24ed206ef3bc4aff2776a")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProiectStackOverflow")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProiectStackOverflow")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

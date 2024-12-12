@@ -11,7 +11,8 @@ namespace ProiectStackOverflow.Data
 		{
 		}
 
-		public DbSet<ApplicationUser> User { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<ApplicationUser> User { get; set; }
 		public DbSet<Question> Questions { get; set; }
 		public DbSet<Tag> Tags { get; set; }
 		public DbSet<Comment> Comments { get; set; }

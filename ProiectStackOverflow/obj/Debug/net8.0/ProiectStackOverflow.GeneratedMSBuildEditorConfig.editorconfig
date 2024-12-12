@@ -66,6 +66,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Questions/HomeIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25zXEhvbWVJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Questions/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -104,6 +108,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Tags/Show.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnc1xTaG93LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Users/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Users/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcU2hvdy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/_ViewImports.cshtml]

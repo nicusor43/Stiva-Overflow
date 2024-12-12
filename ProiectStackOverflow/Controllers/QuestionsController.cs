@@ -24,7 +24,17 @@ namespace ProiectStackOverflow.Controllers
             _roleManager = roleManager;
         }
 
-        [Authorize(Roles = "Admin, User")]
+		public IActionResult HomeIndex()
+		{
+            var questions = db.Questions.Include("Tag").Include("User")
+                                .OrderByDescending(q => q.Date)
+                                .Take(10);
+
+			ViewBag.Questions = questions;
+
+			return View();
+
+        }
 		public IActionResult Index(int id)
 		{
 			var questions = from question in db.Questions.Include("Tag").Include("User")

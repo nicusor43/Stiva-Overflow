@@ -1,0 +1,29 @@
+﻿@{
+	ViewBag.Title = "Newest";
+}
+
+<br />
+<h3>Newest Questions</h3>
+<hr />
+<br />
+
+@foreach (var q in ViewBag.Questions)
+{
+	<div class="card">
+		<div class="card-body">
+			<h3 class="card-title alert-secondary p-3 rounded-2">
+				<a href="/Questions/Show/@q.Id" style="color: inherit; text-decoration: none;">@q.Title</a>
+			</h3>
+			<div class="card-text description">@q.Content</div>
+			<div class="d-flex justify-content-between flex-row mt-5">
+				<div><i class="bi bi-person"></i>@q.User.UserName</div>
+
+				<div> @q.Tag.TagName</div>
+
+				<span class="alert-info px-1 align-content-center">@q.Date</span>
+
+			</div>
+		</div>
+	</div>
+}
+
