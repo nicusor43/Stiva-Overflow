@@ -17,3 +17,4 @@ namespace ProiectStackOverflow.Models
 		public virtual Question? Question { get; set; }
 	}
 }
+//test
