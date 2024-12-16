@@ -9,11 +9,6 @@
 </p>
 <br />
 
-@if (TempData.ContainsKey("message"))
-{
-	<h1>@ViewBag.message</h1>
-}
-
 <div class="row">
 	@foreach (var tag in ViewBag.Tags)
 	{
@@ -38,6 +33,3 @@
 <div class="d-flex justify-content-around">
 	<a class="btn alert-warning" href="/Questions/New">Ask question</a>
 </div>
-<br />
-<a class="btn alert-primary" asp-controller="Tags" asp-action="New">Add Tag</a>
-<br />
