@@ -29,4 +29,8 @@
     <Folder Include="Migrations\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include=".github\workflows\publish.yaml" />
+  </ItemGroup>
+
 </Project>
