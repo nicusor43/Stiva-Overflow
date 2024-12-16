@@ -31,5 +31,9 @@
 <br />
 
 <div class="d-flex justify-content-around">
+	@if (ViewBag.Admin)
+	{
+		<a class="btn alert-warning" href="/Tags/New">Add tag</a>
+	}
 	<a class="btn alert-warning" href="/Questions/New">Ask question</a>
 </div>
