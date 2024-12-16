@@ -19,7 +19,6 @@ options.SignIn.RequireConfirmedAccount = true)
 .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<IImageStorageService, ImageStorageService>();
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
