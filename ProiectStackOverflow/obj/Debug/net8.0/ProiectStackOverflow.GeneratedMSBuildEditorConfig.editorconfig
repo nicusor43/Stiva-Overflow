@@ -17,119 +17,119 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProiectStackOverflow
 build_property.RootNamespace = ProiectStackOverflow
-build_property.ProjectDir = C:\Users\lenovo\OneDrive\Documents\info\GitHub\Proiect_ASP.Net\ProiectStackOverflow\
+build_property.ProjectDir = /home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\lenovo\OneDrive\Documents\info\GitHub\Proiect_ASP.Net\ProiectStackOverflow
+build_property.MSBuildProjectDirectory = /home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Areas/Identity/Pages/Account/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Areas/Identity/Pages/Account/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9fVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Areas/Identity/Pages/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Areas/Identity/Pages/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Answers/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5zd2Vyc1xFZGl0LmNzaHRtbA==
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Answers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5zd2Vycy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Comments/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudHNcRWRpdC5jc2h0bWw=
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Comments/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29tbWVudHMvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Questions/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25zXEVkaXQuY3NodG1s
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Questions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVlc3Rpb25zL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Questions/HomeIndex.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25zXEhvbWVJbmRleC5jc2h0bWw=
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Questions/HomeIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVlc3Rpb25zL0hvbWVJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Questions/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25zXEluZGV4LmNzaHRtbA==
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Questions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVlc3Rpb25zL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Questions/New.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25zXE5ldy5jc2h0bWw=
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Questions/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVlc3Rpb25zL05ldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Questions/Show.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25zXFNob3cuY3NodG1s
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Questions/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVlc3Rpb25zL1Nob3cuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Shared/_LoginPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Tags/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnc1xFZGl0LmNzaHRtbA==
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Tags/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFncy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Tags/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnc1xJbmRleC5jc2h0bWw=
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Tags/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFncy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Tags/New.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnc1xOZXcuY3NodG1s
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Tags/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFncy9OZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Tags/Show.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnc1xTaG93LmNzaHRtbA==
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Tags/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFncy9TaG93LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Users/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Users/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Users/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Users/Show.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcU2hvdy5jc2h0bWw=
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Users/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvU2hvdy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lenovo/OneDrive/Documents/info/GitHub/Proiect_ASP.Net/ProiectStackOverflow/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-ye770syeb9
+[/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-y23x6uc51q

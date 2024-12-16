@@ -9,7 +9,7 @@ namespace ProiectStackOverflow.Models
 		[Key]
 		public int Id { get; set; }
 		[Required(ErrorMessage = "Content is mandatory")]
-		public string Content { get; set; }
+		public string? Content { get; set; }
 		public DateTime Date { get; set; }
         public string? UserId { get; set; }
         public int? QuestionId { get; set; }

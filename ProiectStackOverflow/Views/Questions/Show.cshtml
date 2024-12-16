@@ -158,7 +158,14 @@
 
                     <p>@ans.Content</p>
                     <small>@ans.Date</small>
-                    <strong><i class="bi bi-person"></i>@ans.User.UserName</strong>
+                    <strong><i class="bi bi-person"></i>@if (@ans.User != null)
+                        {
+                        @ans.User.UserName
+                        }
+                        else
+                        {
+                        <p>Property not available.</p>
+                        }</strong>
 
                 </div>
                 <br>
@@ -213,7 +220,7 @@
                         <label>Answer</label>
                         <br />
                         <textarea class="form-control" name="Content"></textarea>
-                        <span asp-validation-for="Answer.Content" class="text-danger"></span>
+                        <span asp-validation-for="@Model.Content" class="text-danger"></span>
                         <br /><br />
                         <button class="btn alert-primary " type="submit">
                             Add answer
