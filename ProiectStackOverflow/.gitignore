@@ -483,7 +483,6 @@ $RECYCLE.BIN/
 # Vim temporary swap files
 *.swp
 
-/ProiectStackOverflow/appsettings.json
 # User specific
 **/.idea/**/workspace.xml
 **/.idea/**/tasks.xml
@@ -517,6 +516,6 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 
-Migrations
+
 
 

@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ProiectStackOverflow.Data;
 using ProiectStackOverflow.Models;
-using ProiectStackOverflow.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
