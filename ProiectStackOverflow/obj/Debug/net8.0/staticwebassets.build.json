@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oVRj4uMxypHKxFTHOks2JaRErIxgh0fzY5xX3i7Rh3A=",
+  "Hash": "iE8GQoom/Ip5yseleHluI4Tqi3W2UVaIOB4+q1t9UYY=",
   "Source": "ProiectStackOverflow",
   "BasePath": "_content/ProiectStackOverflow",
   "Mode": "Default",
@@ -1250,6 +1250,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/site.js"
+    },
+    {
+      "Identity": "/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/wwwroot/js/SummerNote.js",
+      "SourceId": "ProiectStackOverflow",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/wwwroot/",
+      "BasePath": "_content/ProiectStackOverflow",
+      "RelativePath": "js/SummerNote.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/SummerNote.js"
     },
     {
       "Identity": "/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",

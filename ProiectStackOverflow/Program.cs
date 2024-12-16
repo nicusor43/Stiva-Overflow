@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ProiectStackOverflow.Data;
 using ProiectStackOverflow.Models;
+using ProiectStackOverflow.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,7 @@ options.SignIn.RequireConfirmedAccount = true)
 .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IImageStorageService, ImageStorageService>();
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())

@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/wwwroot/js/SummerNote.js",
+      "PackagePath": "staticwebassets/js/SummerNote.js"
+    },
+    {
       "Id": "/home/nicusor/RiderProjects/Proiect_ASP.Net/ProiectStackOverflow/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },
