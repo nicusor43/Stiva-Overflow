@@ -90,3 +90,23 @@ a.nav-link {
     overflow: hidden;
     max-height: 3em; /* Înãl?imea a douã rânduri */
 }
+
+/*paginare*/
+
+.pagination .page-link {
+    background-color: #dfe6e9;
+    color: #2d3436;
+    border: 1px solid #2d3436;
+}
+
+.pagination .page-link:hover 
+{
+    background-color: #b2bec3; 
+    color: #636e72; 
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #b2bec3;
+    color: #2d3436;
+    border-color: #2d3436;
+}

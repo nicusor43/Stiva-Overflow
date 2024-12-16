@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Ganss.Xss;
 
 namespace ProiectStackOverflow.Controllers
 {
@@ -26,9 +27,10 @@ namespace ProiectStackOverflow.Controllers
 
 		public IActionResult HomeIndex()
 		{
-            var questions = db.Questions.Include("Tag").Include("User")
+            var questions = db.Questions.Include("Tag")
+										.Include("User")
                                 .OrderByDescending(q => q.Date)
-                                .Take(10);
+                                .Take(5);
 
 			ViewBag.Questions = questions;
 
@@ -37,14 +39,31 @@ namespace ProiectStackOverflow.Controllers
         }
 		public IActionResult Index(int id)
 		{
-			var questions = from question in db.Questions.Include("Tag").Include("User")
+			int page_questions = 5;
+
+			var questions = from question in db.Questions.Include("Tag")
+														 .Include("User")
 							where question.TagId == id
 							select question;
 
-			Tag tag = db.Tags.Where(t => t.Id == id).First();
+            int totalItems = questions.Count();
 
-			ViewBag.Questions = questions;
+            var currentPage = Convert.ToInt32(HttpContext.Request.Query["page"]);
+
+            var offset = 0;
+			if (!currentPage.Equals(0))
+            {
+                offset = (currentPage - 1) * page_questions;
+            }
+
+			var paginatedQuestions = questions.Skip(offset).Take(page_questions);
+            ViewBag.lastPage = Math.Ceiling((float)totalItems /(float)page_questions);
+			ViewBag.CurrentPage = currentPage;
+			ViewBag.PaginationBaseUrl = $"/Questions/Index/{id}?page";
+
+			Tag tag = db.Tags.Where(t => t.Id == id).First();
 			ViewBag.Tag = tag;
+			ViewBag.Questions = paginatedQuestions;
 
 			if (TempData.ContainsKey("message"))
 			{
@@ -55,11 +74,13 @@ namespace ProiectStackOverflow.Controllers
 			return View();
 		}
 
-        [Authorize(Roles = "Admin, User")]
         public IActionResult Show(int id)
 		{
-			Question question = db.Questions.Include("Tag").Include("Comments")
-							  .Include("Answers").Include("User").Include("Comments.User")
+			Question question = db.Questions.Include("Tag")
+											.Include("Comments")
+											.Include("Answers")
+											.Include("User")
+											.Include("Comments.User")
                               .Where(q => q.Id == id)
 							  .First();
 
@@ -82,13 +103,16 @@ namespace ProiectStackOverflow.Controllers
         [HttpPost]
 		public IActionResult New(Question question)
 		{
+            var sanitizer = new HtmlSanitizer();
+
             question.Date = DateTime.Now;
 
 			question.UserId = _userManager.GetUserId(User);
 
 			if (ModelState.IsValid)
 			{
-				db.Questions.Add(question);
+                //question.Content = sanitizer.Sanitize(question.Content);
+                db.Questions.Add(question);
 				db.SaveChanges();
 
 				//TempData["message"] = "Articolul a fost adaugat";
@@ -129,10 +153,13 @@ namespace ProiectStackOverflow.Controllers
 		{
 			Question question = db.Questions.Find(id);
 
+			var sanitizer = new HtmlSanitizer();
+
 			if (ModelState.IsValid)
 			{
 				if (question.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
 				{
+					//requestQuestion.Content = sanitizer.Sanitize(requestQuestion.Content);
 					question.Title = requestQuestion.Title;
 					question.Content = requestQuestion.Content;
 					question.TagId = requestQuestion.TagId;
@@ -159,7 +186,15 @@ namespace ProiectStackOverflow.Controllers
 		[HttpPost]
 		public ActionResult Delete(int id)
 		{
-			Question question = db.Questions.Find(id);
+			//Question question = db.Questions.Find(id);
+
+			Question question = db.Questions.Include("Tag")
+											.Include("Comments")
+											.Include("Answers")
+											.Include("User")
+											.Include("Comments.User")
+							  .Where(q => q.Id == id)
+							  .First();
 
 			if (question.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
 			{
@@ -219,12 +254,8 @@ namespace ProiectStackOverflow.Controllers
 			}
 			else
 			{
-				Question q = db.Questions.Include("Tag").Include("User")
-							.Include("Comments").Include("Answers")
-							.Include("Comment.User")
-							.Where(q => q.Id == comment.QuestionId).First();
 				SetAccesRights();
-                return View(q);
+                return Redirect("/Questions/Show/" + comment.QuestionId);
             }
 		}
 
@@ -244,13 +275,9 @@ namespace ProiectStackOverflow.Controllers
             }
             else
             {
-                Question q = db.Questions.Include("Tag").Include("User")
-                            .Include("Comments").Include("Answers")
-                            .Include("Comment.User")
-                            .Where(q => q.Id == answer.QuestionId).First();
                 SetAccesRights();
-                return View(q);
-            }
+				return Redirect("/Questions/Show/" + answer.QuestionId);
+			}
         }
     }
 }

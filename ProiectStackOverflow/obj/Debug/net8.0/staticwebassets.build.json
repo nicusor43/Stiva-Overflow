@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nX/34gDSlvVemrI8Wup8hwRpea70tzimDKRt4GTch3c=",
+  "Hash": "pPjFP6u4zdIKY7mjQRAex2hwXY88t190NBMlJdu0g7U=",
   "Source": "ProiectStackOverflow",
   "BasePath": "_content/ProiectStackOverflow",
   "Mode": "Default",
@@ -1250,6 +1250,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\wwwroot\\js\\SummerNote.js",
+      "SourceId": "ProiectStackOverflow",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\wwwroot\\",
+      "BasePath": "_content/ProiectStackOverflow",
+      "RelativePath": "js/SummerNote.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\SummerNote.js"
     },
     {
       "Identity": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
