@@ -12,7 +12,7 @@ namespace ProiectStackOverflow.Models
 		public string Content { get; set; }
 		public DateTime Date { get; set; }
         public string? UserId { get; set; }
-        public int? QuestionId { get; set; }
+        public int QuestionId { get; set; }
         public virtual ApplicationUser? User { get; set; }
 		public virtual Question? Question { get; set; }
 	}

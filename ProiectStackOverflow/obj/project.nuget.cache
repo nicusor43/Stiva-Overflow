@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FbTZUzQTj5h7+lveL2whDOAv0MOrrYGNj4Qpwh7dCTsMwk/ui/E3HNJ4vcp4cgPASQELY2xFnZwxz5EGcZ4vcQ==",
+  "dgSpecHash": "tLaHFN7KBvrq4ozk2gYHEuxRG9iL7ln0RyWz8QO1b2O5uNvHPA2LjGTDtzGR0vYqAtFTyNPb0dYUGrpcJm0DVA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lenovo\\OneDrive\\Documents\\info\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\ProiectStackOverflow.csproj",
+  "projectFilePath": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\ProiectStackOverflow.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lenovo\\.nuget\\packages\\anglesharp\\0.17.1\\anglesharp.0.17.1.nupkg.sha512",
     "C:\\Users\\lenovo\\.nuget\\packages\\anglesharp.css\\0.17.0\\anglesharp.css.0.17.0.nupkg.sha512",

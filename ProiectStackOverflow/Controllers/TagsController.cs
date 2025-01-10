@@ -3,6 +3,7 @@ using ProiectStackOverflow.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 
 namespace ProiectStackOverflow.Controllers
 {
@@ -26,8 +27,29 @@ namespace ProiectStackOverflow.Controllers
 			var tags = from tag in db.Tags
 							 orderby tag.TagName
 							 select tag;
+
 			ViewBag.Tags = tags;
 			ViewBag.Admin = User.IsInRole("Admin");
+			
+			var search = "";
+			if (Convert.ToString(HttpContext.Request.Query["TagSearch"]) != null)
+			{
+				search = Convert.ToString(HttpContext.Request.Query["TagSearch"]).Trim();
+			}
+			List<int> tagIds = db.Tags.Where
+			(
+				t => t.TagName.Contains(search)
+				|| t.Description.Contains(search)
+			).Select(tag => tag.Id).ToList();
+
+			tags = db.Tags.Where(tag => tagIds.Contains(tag.Id)).OrderBy(t => t.TagName);
+
+			ViewBag.TagSearchString = search;
+
+			if (search != "")
+			{
+                ViewBag.Tags = tags;
+			}
 			return View();
 		}
 

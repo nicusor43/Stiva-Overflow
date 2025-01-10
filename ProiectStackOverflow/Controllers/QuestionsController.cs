@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Ganss.Xss;
+using System.Text.RegularExpressions;
 
 namespace ProiectStackOverflow.Controllers
 {
@@ -27,16 +28,92 @@ namespace ProiectStackOverflow.Controllers
 
 		public IActionResult HomeIndex()
 		{
-            var questions = db.Questions.Include("Tag")
+			/*var questions = db.Questions.Include("Tag")
 										.Include("User")
                                 .OrderByDescending(q => q.Date)
                                 .Take(5);
 
 			ViewBag.Questions = questions;
 
-			return View();
+			return View();*/
 
-        }
+			var questions = db.Questions.Include("Tag")
+									   .Include("User")
+									   .OrderBy(a => a.Date);
+
+			var search = "";
+			if (Convert.ToString(HttpContext.Request.Query["search"]) != null)
+			{
+				search = Convert.ToString(HttpContext.Request.Query["search"]).Trim();
+			}
+            // Cautare in articol (Title si Content)
+            List<int> questionIds = db.Questions.Where
+            (
+				q => q.Title.Contains(search)
+				|| q.Content.Contains(search)
+            ).Select(q => q.Id).ToList();
+
+            // Cautare in comentarii (Content)
+            List<int> questionIdsOfCommentsWithSearchString =
+            db.Comments.Where
+            (
+            c =>  c.Content.Contains(search)
+            ).Select(c => (int)c.QuestionId).ToList();
+
+			List<int> mergedIds = questionIds.Union(questionIdsOfCommentsWithSearchString).ToList();
+            
+            questions = db.Questions.Where(question =>
+            mergedIds.Contains(question.Id))
+            .Include("Tag")
+            .Include("User")
+            .OrderBy(a => a.Date);
+
+			//PAGINATIE
+			int totalItems = questions.Count();
+			int page_questions = 5;
+
+			var currentPage = Convert.ToInt32(HttpContext.Request.Query["page"]);
+
+			var offset = 0;
+			if (!currentPage.Equals(0))
+			{
+				offset = (currentPage - 1) * page_questions;
+			}
+
+			var paginatedQuestions = questions.Skip(offset).Take(page_questions);
+			ViewBag.lastPage = Math.Ceiling((float)totalItems / (float)page_questions);
+			ViewBag.CurrentPage = currentPage;
+			ViewBag.PaginationBaseUrl = $"/Questions/HomeIndex/?page";
+
+			ViewBag.Questions = paginatedQuestions;
+
+			/*if (!string.IsNullOrEmpty(search))
+			{
+				foreach (var question in questions)
+				{
+					// Evidențiază termenul de căutare în titlu
+					question.Title = Regex.Replace(question.Title, Regex.Escape(search),
+						match => $"<mark>{match.Value}</mark>", RegexOptions.IgnoreCase);
+
+					// Evidențiază termenul de căutare în conținut
+					question.Content = Regex.Replace(question.Content, Regex.Escape(search),
+						match => $"<mark>{match.Value}</mark>", RegexOptions.IgnoreCase);
+				}
+			}*/
+
+			ViewBag.SearchString = search;
+            if (search != "")
+            {
+                ViewBag.PaginationBaseUrl = "/Questions/HomeIndex/?search="
+                + search + "&page";
+            }
+            else
+            {
+                ViewBag.PaginationBaseUrl = "/Questions/HomeIndex/?page";
+            }
+
+            return View();
+		}
 		public IActionResult Index(int id)
 		{
 			int page_questions = 5;
@@ -141,8 +218,6 @@ namespace ProiectStackOverflow.Controllers
 			else
 			{
 				question.T = GetAllTags();
-				//TempData["message"] = "Nu aveti dreptul sa faceti modificari";
-				//TempData["messageType"] = "alert-danger";
 				return RedirectToAction("Show", new { id = id });
 			}
 		}
@@ -201,14 +276,10 @@ namespace ProiectStackOverflow.Controllers
 				var tag = question.TagId;
 				db.Questions.Remove(question);
 				db.SaveChanges();
-				//TempData["message"] = "Articolul a fost sters";
-				//TempData["messageType"] = "alert-success";
 				return RedirectToAction("Index", new { id = tag });
 			}
 			else
 			{
-				//TempData["message"] = "Nu aveti dreptul sa stergeti";
-				//TempData["messageType"] = "alert-danger";
 				return RedirectToAction("Show", new { id = id });
 			}
 		}
