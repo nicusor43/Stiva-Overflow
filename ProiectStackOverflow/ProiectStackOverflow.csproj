@@ -24,4 +24,24 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Migrations\**" />
+    <Compile Remove="Data\Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Migrations\**" />
+    <EmbeddedResource Remove="Data\Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Migrations\**" />
+    <Content Remove="Data\Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Migrations\**" />
+    <None Remove="Data\Migrations\**" />
+  </ItemGroup>
+
 </Project>
