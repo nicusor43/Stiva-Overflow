@@ -12,8 +12,8 @@ using ProiectStackOverflow.Data;
 namespace ProiectStackOverflow.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241211233145_UsersCRUD")]
-    partial class UsersCRUD
+    [Migration("20250112112611_TeRog")]
+    partial class TeRog
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -204,6 +204,10 @@ namespace ProiectStackOverflow.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Description")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -247,6 +251,7 @@ namespace ProiectStackOverflow.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("UserName")
+                        .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
@@ -278,7 +283,7 @@ namespace ProiectStackOverflow.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("QuestionId")
+                    b.Property<int>("QuestionId")
                         .HasColumnType("int");
 
                     b.Property<string>("UserId")
@@ -337,9 +342,11 @@ namespace ProiectStackOverflow.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TagName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -417,7 +424,9 @@ namespace ProiectStackOverflow.Migrations
                 {
                     b.HasOne("ProiectStackOverflow.Models.Question", "Question")
                         .WithMany("Comments")
-                        .HasForeignKey("QuestionId");
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ProiectStackOverflow.Models.ApplicationUser", "User")
                         .WithMany("Comments")

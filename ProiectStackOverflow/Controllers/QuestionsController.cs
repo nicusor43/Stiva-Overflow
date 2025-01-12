@@ -138,7 +138,9 @@ namespace ProiectStackOverflow.Controllers
             ViewBag.SortOrder = sortOrder;
             ViewBag.PaginationBaseUrl = $"/Questions/HomeIndex/?sortOrder={sortOrder}&page";
 
-            return View();
+			ViewBag.UserCurent = User.Identity.Name;
+
+			return View();
         }
 
         public IActionResult Index(int id, int? page, string sortOrder)
@@ -232,12 +234,6 @@ namespace ProiectStackOverflow.Controllers
         //     Tag tag = db.Tags.Where(t => t.Id == id).First();
         //     ViewBag.Tag = tag;
         //     ViewBag.Questions = paginatedQuestions;
-        //
-        //     if (TempData.ContainsKey("message"))
-        //     {
-        //         //ViewBag.Message = TempData["message"];
-        //         //ViewBag.Alert = TempData["messageType"];
-        //     }
         //
         //     return View();
         // }
