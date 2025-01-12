@@ -141,6 +141,7 @@ namespace ProiectStackOverflow.Controllers
 			Tag tag = db.Tags.Where(t => t.Id == id).First();
 			ViewBag.Tag = tag;
 			ViewBag.Questions = paginatedQuestions;
+			ViewBag.Admin = User.IsInRole("Admin");
 
 			if (TempData.ContainsKey("message"))
 			{

@@ -4,27 +4,25 @@
     ViewBag.Title = "Show Tag";
 }
 
+<div class="container">
 
-<h2>@ViewBag.Title</h2>
+    <h3>[@Model.TagName]</h3>
+    <p>@Model.Description</p>
 
-<br />
+    <div class="d-inline-flex">
+        <a class="btn alert-success m-3" asp-controller="Tags" asp-action="Edit" asp-route-id="@Model.Id">
+            <i class="bi bi-pencil-square"></i>Edit
+        </a>
 
-<h3>[@Model.TagName]</h3>
-<p>@Model.Description</p>
+        <form method="post" asp-controller="Tags" asp-action="Delete"
+              asp-route-id="@Model.Id">
 
+            <button class="btn alert-danger m-3" type="submit">
+                <i class="bi bi-trash"></i>Delete
+            </button>
 
-<form method="post" asp-controller="Tags" asp-action="Delete"
-      asp-route-id="@Model.Id">
+        </form>
+    </div>
 
-    <button class="btn alert-danger" type="submit">Delete</button>
-
-</form>
-
-<br />
-
-<a class="btn alert-warning" href="/Tags/Index/">Tags</a>
-
-<br />
-<hr />
-<br />
+</div>
 

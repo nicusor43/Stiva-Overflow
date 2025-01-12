@@ -1,6 +1,6 @@
 ﻿@model ProiectStackOverflow.Models.Question
 
-<div class="card">
+<div class="card m-3">
 
     <div class="card-body">
 
@@ -17,29 +17,25 @@
         </div>
 
     </div>
-    <br />
-
-    <hr />
-
-    @if(Model.UserId == ViewBag.UserCurent || ViewBag.Admin)
-    {
-        <div class="d-flex flex-row justify-content-between">
-
-            <a class="btn alert-info" href="/Questions/Edit/@Model.Id">Edit</a>
-
-            <form method="post" asp-controller="Questions" asp-action="Delete" asp-route-id="@Model.Id">
-
-                <button class="btn alert-danger" type="submit">Delete</button>
-
-            </form>
-
-        </div>
-    }
 
 </div>
 
-<br />
-<br />
+@if (Model.UserId == ViewBag.UserCurent || ViewBag.Admin)
+{
+    <div class="d-flex flex-row">
+
+        <a class="btn alert-success m-3" href="/Questions/Edit/@Model.Id">
+            <i class="bi bi-pencil-square"></i>Edit
+        </a>
+
+        <form method="post" asp-controller="Questions" asp-action="Delete" asp-route-id="@Model.Id">
+
+            <button class="btn alert-danger m-3" type="submit"><i class="bi bi-trash"></i>Delete</button>
+
+        </form>
+
+    </div>
+}
 
 <div class="container">
     <div class="row">
@@ -63,7 +59,7 @@
 
                     <p>@comm.Content</p>
                     <small>@comm.Date</small>
-                    <strong><i class="bi bi-person"></i>@comm.User.UserName</strong>
+                    <strong><i class="bi bi-person-fill"></i>@comm.User.UserName</strong>
 
                 </div>
                 <br>
@@ -74,7 +70,7 @@
 
                         <div>
 
-                            <a class="btn alert-primary" href="/Comments/Edit/@comm.Id"><i class="bi bi-pencil-square"></i>Edit</a>
+                            <a class="btn alert-success" href="/Comments/Edit/@comm.Id"><i class="bi bi-pencil-square"></i>Edit</a>
 
                         </div>
 
@@ -120,7 +116,7 @@
                         <textarea class="form-control" name="Content"></textarea>
                         <span asp-validation-for="Comment.Content" class="text-danger"></span>
                         <br /><br />
-                        <button class="btn alert-primary " type="submit">
+                        <button class="btn alert-secondary " type="submit">
                             Add comment
                         </button>
                     </div>
@@ -169,7 +165,7 @@
 
                     <div>
 
-                        <a class="btn alert-primary" href="/Answers/Edit/@ans.Id"><i class="bi bi-pencil-square"></i>Edit</a>
+                        <a class="btn alert-success" href="/Answers/Edit/@ans.Id"><i class="bi bi-pencil-square"></i>Edit</a>
 
                         </div>
 
@@ -215,7 +211,7 @@
                         <textarea class="form-control" name="Content"></textarea>
                         <span asp-validation-for="Answer.Content" class="text-danger"></span>
                         <br /><br />
-                        <button class="btn alert-primary " type="submit">
+                        <button class="btn alert-secondary " type="submit">
                             Add answer
                         </button>
                     </div>
