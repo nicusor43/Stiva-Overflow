@@ -6,8 +6,16 @@
 
 <div class="d-inline-flex justify-content-between w-100">
 	<div>
-		<h3 class="m-0">Welcome back, @ViewBag.UserCurent!</h3>
-		<p class="m-0">Find answers to your technical questions and help others answer theirs.</p>
+		@if(@ViewBag.UserCurent != null)
+		{
+			<h3 class="m-0">Welcome back, @ViewBag.UserCurent!</h3>
+			<p class="m-0">Find answers to your technical questions and help others answer theirs.</p>
+		}
+		else
+		{
+			<h3 class="m-0">Welcome to StivaOverflow!</h3>
+			<p class="m-0">Sign up to ask questions, provide answers, and interact with the community!</p>
+		}
 	</div>
 
 	<div class="d-flex justify-content-end">

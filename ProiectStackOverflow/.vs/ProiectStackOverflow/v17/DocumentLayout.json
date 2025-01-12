@@ -50,8 +50,7 @@
               "RelativeToolTip": "Models\\ApplicationUser.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T12:36:54.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-12T12:36:54.651Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "Controllers\\QuestionsController.cs",
               "ViewState": "AQIAAH4AAAAAAAAAAAAYwIwAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T12:33:45.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-12T12:33:45.749Z"
             },
             {
               "$type": "Document",
@@ -74,7 +72,7 @@
               "RelativeDocumentMoniker": "Views\\Questions\\HomeIndex.cshtml",
               "ToolTip": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Questions\\HomeIndex.cshtml*",
               "RelativeToolTip": "Views\\Questions\\HomeIndex.cshtml*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA0AAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAABdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-12T12:13:45.341Z",
               "EditorCaption": ""
@@ -89,8 +87,7 @@
               "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABrAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-12T12:11:35.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-12T12:11:35.125Z"
             }
           ]
         }
