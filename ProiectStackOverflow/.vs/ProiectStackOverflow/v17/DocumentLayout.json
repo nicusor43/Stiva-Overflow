@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\stuff\\github\\proiect_asp.net\\proiectstackoverflow\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\stuff\\github\\proiect_asp.net\\proiectstackoverflow\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\stuff\\github\\proiect_asp.net\\proiectstackoverflow\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\stuff\\github\\proiect_asp.net\\proiectstackoverflow\\views\\questions\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:views\\questions\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\stuff\\github\\proiect_asp.net\\proiectstackoverflow\\views\\questions\\homeindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:views\\questions\\homeindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\stuff\\github\\proiect_asp.net\\proiectstackoverflow\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\stuff\\github\\proiect_asp.net\\proiectstackoverflow\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,14 +39,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-12T16:56:37.333Z",
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs*",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs*",
+              "ViewState": "AQIAAEAAAAAAAAAAAAD4v0YAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T17:13:58.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T17:10:43.593Z",
               "EditorCaption": ""
             },
             {
@@ -65,48 +70,9 @@
               "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
               "ToolTip": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-12T16:56:13.684Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AQIAAHAAAAAAAAAAAAAAAIIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-01-12T16:16:58.814Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeIndex.cshtml",
-              "DocumentMoniker": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Questions\\HomeIndex.cshtml",
-              "RelativeDocumentMoniker": "Views\\Questions\\HomeIndex.cshtml",
-              "ToolTip": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Questions\\HomeIndex.cshtml",
-              "RelativeToolTip": "Views\\Questions\\HomeIndex.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-12T16:13:40.969Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Show.cshtml",
-              "DocumentMoniker": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Questions\\Show.cshtml",
-              "RelativeDocumentMoniker": "Views\\Questions\\Show.cshtml",
-              "ToolTip": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Questions\\Show.cshtml",
-              "RelativeToolTip": "Views\\Questions\\Show.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-12T16:11:53.765Z",
               "EditorCaption": ""
             }
           ]
