@@ -1,0 +1,58 @@
+@model ProiectStackOverflow.Models.Profile
+
+@{
+    ViewData["Title"] = Model.User.UserName+"'s profile";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h2>@ViewData["Title"]</h2>
+            <hr />
+
+            <p><strong>Name:</strong> @(Model.User.FirstName + " " + Model.User.LastName)</p>
+            <p><strong>Email:</strong> @Model.User.Email</p>
+            
+            @if (!string.IsNullOrEmpty(Model.User.Description))
+            {
+                <p><strong>About:</strong></p>
+                <p>@Model.User.Description</p>
+            }
+
+            <hr />
+
+            <h3>Recent Activity</h3>
+
+            @if (Model.RecentQuestions.Any() || Model.RecentAnswers.Any())
+            {
+                @if (Model.RecentQuestions.Any())
+                {
+                    <h4>Last Questions:</h4>
+                    <ul>
+                        @foreach (var question in Model.RecentQuestions)
+                        {
+                            <li><a href="/Questions/Show/@question.Id">@question.Title</a> (@question.Date.ToString("dd.MM.yyyy HH:mm"))</li>
+                        }
+                    </ul>
+                }
+
+                @if (Model.RecentAnswers.Any())
+                {
+                    <h4>Last Answers:</h4>
+                    <ul>
+                        @foreach (var answer in Model.RecentAnswers)
+                        {
+                            <li>@answer.Content.Substring(0, Math.Min(answer.Content.Length, 50)) to the question: <a href="/Questions/Show/@answer.QuestionId">@answer.Question.Title</a> (@answer.Date.ToString("dd.MM.yyyy HH:mm"))</li>
+                        }
+                    </ul>
+                }
+            }
+            else
+            {
+                <p>There is no recent activity.</p>
+            }
+        </div>
+        <div class="col-md-4">
+            </div>
+    </div>
+</div>

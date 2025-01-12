@@ -1,9 +1,26 @@
 ﻿@{
 	ViewBag.Title = "Questions";
+	// Determină ordinea săgeților în funcție de sortarea curentă
+	string sortOrderDate = ViewBag.SortOrder == "date_asc" ? "▲" : "▼";
+	string sortOrderAnswers = ViewBag.SortOrder == "answers_asc" ? "▲" : "▼";
 }
 
 <h3>[@ViewBag.Tag.TagName]</h3>
 <p>@ViewBag.Tag.Description</p>
+
+<div class="d-flex justify-content-end mb-3 me-4">
+	<div class="dropdown">
+		<button class="btn btn-secondary dropdown-toggle me-2" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+			Sort
+		</button>
+		<ul class="dropdown-menu" aria-labelledby="sortDropdown">
+			<li><a class="dropdown-item" href="@Url.Action("Index", new { sortOrder = "date_desc", page = ViewBag.CurrentPage, Id = ViewBag.Tag.Id })">Newest @(ViewBag.SortOrder == "date_desc" ? "▼" : "")</a></li>
+			<li><a class="dropdown-item" href="@Url.Action("Index", new { sortOrder = "date_asc", page = ViewBag.CurrentPage, Id = ViewBag.Tag.Id })">Oldest@(ViewBag.SortOrder == "date_asc" ? "▲" : "")</a></li>
+			<li><a class="dropdown-item" href="@Url.Action("Index", new { sortOrder = "answers_asc", page = ViewBag.CurrentPage, Id = ViewBag.Tag.Id })">Least Answers @(ViewBag.SortOrder == "answers_asc" ? "▲" : "")</a></li>
+			<li><a class="dropdown-item" href="@Url.Action("Index", new { sortOrder = "answers_desc", page = ViewBag.CurrentPage, Id = ViewBag.Tag.Id })">Most Answers @(ViewBag.SortOrder == "answers_desc" ? "▼" : "")</a></li>
+		</ul>
+	</div>
+</div>
 
 <div class="d-flex flex-column gap-3">
 	<div>
@@ -16,7 +33,7 @@
 					</h3>
 					<div class="card-text description">@Html.Raw(q.Content)</div>
 					<div class="d-flex justify-content-between flex-row mt-5">
-						<div><i class="bi bi-person-fill"></i>@q.User.UserName</div>
+						<div><i class="bi bi-person-fill"></i><a href="@Url.Action("Index", "Profile", new { id = q.UserId })">@q.User.UserName</a></div>
 
 						<div> @q.Tag.TagName</div>
 

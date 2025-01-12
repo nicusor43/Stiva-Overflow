@@ -70,10 +70,11 @@ namespace ProiectStackOverflow.Areas.Identity.Pages.Account.Manage
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
 
             Username = userName;
-
+            
             Input = new InputModel
             {
-                PhoneNumber = phoneNumber
+                PhoneNumber = phoneNumber,
+                Description = user.Description
             };
         }
 
@@ -112,6 +113,17 @@ namespace ProiectStackOverflow.Areas.Identity.Pages.Account.Manage
                     StatusMessage = "Unexpected error when trying to set phone number.";
                     return RedirectToPage();
                 }
+            }
+
+            user.Description = Input.Description;
+            
+            var updateResult = await _userManager.UpdateAsync(user);
+            if (!updateResult.Succeeded)
+            {
+                
+                StatusMessage = "Error when trying to update user."; 
+                
+                 return RedirectToPage();
             }
 
             await _signInManager.RefreshSignInAsync(user);

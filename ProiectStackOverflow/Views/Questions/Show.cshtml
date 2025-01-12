@@ -1,5 +1,6 @@
 ﻿@model ProiectStackOverflow.Models.Question
 
+
 <div class="card">
 
     <div class="card-body">
@@ -17,11 +18,11 @@
         </div>
 
     </div>
-    <br />
+    <br/>
 
-    <hr />
+    <hr/>
 
-    @if(Model.UserId == ViewBag.UserCurent || ViewBag.Admin)
+    @if (Model.UserId == ViewBag.UserCurent || ViewBag.Admin)
     {
         <div class="d-flex flex-row justify-content-between">
 
@@ -38,8 +39,8 @@
 
 </div>
 
-<br />
-<br />
+<br/>
+<br/>
 
 <div class="container">
     <div class="row">
@@ -63,12 +64,14 @@
 
                     <p>@comm.Content</p>
                     <small>@comm.Date</small>
-                    <strong><i class="bi bi-person"></i>@comm.User.UserName</strong>
+                    <strong>
+                        <i class="bi bi-person"></i><a href="@Url.Action("Index", "Profile", new { id = comm.UserId })">@comm.User.UserName</a>
+                    </strong>
 
                 </div>
                 <br>
 
-                @if(comm.UserId == ViewBag.UserCurent || ViewBag.Admin)
+                @if (comm.UserId == ViewBag.UserCurent || ViewBag.Admin)
                 {
                     <div class="d-flex gap-3">
 
@@ -91,7 +94,7 @@
                     </div>
                 }
 
-                <br />
+                <br/>
 
             </div>
 
@@ -109,17 +112,17 @@
         <div class="col-md-2"></div>
 
         <div class="col-md-8">
-     
+
             <div class="card">
 
                 <form method="post" asp-controller="Questions" asp-action="ShowComm">
                     <div class="card-body">
-                        <input type="hidden" name="QuestionId" value="@Model.Id" />
+                        <input type="hidden" name="QuestionId" value="@Model.Id"/>
                         <label>Comment</label>
-                        <br />
+                        <br/>
                         <textarea class="form-control" name="Content"></textarea>
                         <span asp-validation-for="Comment.Content" class="text-danger"></span>
-                        <br /><br />
+                        <br/><br/>
                         <button class="btn alert-primary " type="submit">
                             Add comment
                         </button>
@@ -141,10 +144,32 @@
         <div class="col-md-1"></div>
         <div class="col-md-10">
             <h1>Answers</h1>
+
+            @{
+                string sortOrderDate = ViewBag.SortOrder == "date_asc" ? "▲" : "▼";
+            }
+
+
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle me-2 mb-4" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Sort by
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+                    <li>
+                        <a class="dropdown-item" href="@Url.Action("Show", new { id = Model.Id, sortOrder = "date_asc" })">
+                            Oldest @(ViewBag.SortOrder == "date_asc" ? "▲" : "")
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="@Url.Action("Show", new { id = Model.Id, sortOrder = "date_desc" })">Newest @(ViewBag.SortOrder == "date_desc" ? "▼" : "")</a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="col-md-1"></div>
     </div>
 </div>
+
 
 @foreach (var ans in Model.Answers)
 {
@@ -158,7 +183,9 @@
 
                     <p>@ans.Content</p>
                     <small>@ans.Date</small>
-                    <strong><i class="bi bi-person"></i>@ans.User.UserName</strong>
+                    <strong>
+                        <i class="bi bi-person"></i><a href="@Url.Action("Index", "Profile", new { id = ans.UserId })">@ans.User.UserName</a>
+                    </strong>
 
                 </div>
                 <br>
@@ -167,9 +194,9 @@
                 {
                     <div class="d-flex gap-3">
 
-                    <div>
+                        <div>
 
-                        <a class="btn alert-primary" href="/Answers/Edit/@ans.Id"><i class="bi bi-pencil-square"></i>Edit</a>
+                            <a class="btn alert-primary" href="/Answers/Edit/@ans.Id"><i class="bi bi-pencil-square"></i>Edit</a>
 
                         </div>
 
@@ -186,7 +213,7 @@
                     </div>
                 }
 
-                <br />
+                <br/>
 
             </div>
 
@@ -209,12 +236,12 @@
 
                 <form method="post" asp-controller="Questions" asp-action="ShowAns">
                     <div class="card-body">
-                        <input type="hidden" name="QuestionId" value="@Model.Id" />
+                        <input type="hidden" name="QuestionId" value="@Model.Id"/>
                         <label>Answer</label>
-                        <br />
+                        <br/>
                         <textarea class="form-control" name="Content"></textarea>
                         <span asp-validation-for="Answer.Content" class="text-danger"></span>
-                        <br /><br />
+                        <br/><br/>
                         <button class="btn alert-primary " type="submit">
                             Add answer
                         </button>

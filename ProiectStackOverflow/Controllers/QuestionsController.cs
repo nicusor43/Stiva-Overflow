@@ -27,7 +27,7 @@ namespace ProiectStackOverflow.Controllers
             _roleManager = roleManager;
         }
 
-        public IActionResult HomeIndex()
+        public IActionResult HomeIndex(int? page, string sortOrder)
         {
             /*var questions = db.Questions.Include("Tag")
                                         .Include("User")
@@ -40,9 +40,11 @@ namespace ProiectStackOverflow.Controllers
 
             var questions = db.Questions.Include("Tag")
                 .Include("User")
+                .Include(q => q.Answers)
                 .OrderBy(a => a.Date);
 
             var search = "";
+
             if (Convert.ToString(HttpContext.Request.Query["search"]) != null)
             {
                 search = Convert.ToString(HttpContext.Request.Query["search"]).Trim();
@@ -68,7 +70,25 @@ namespace ProiectStackOverflow.Controllers
                     mergedIds.Contains(question.Id))
                 .Include("Tag")
                 .Include("User")
+                .Include(q => q.Answers)
                 .OrderBy(a => a.Date);
+
+            // Sortează întrebările
+            switch (sortOrder)
+            {
+                case "date_asc":
+                    questions = questions.OrderBy(q => q.Date);
+                    break;
+                case "date_desc":
+                    questions = questions.OrderByDescending(q => q.Date);
+                    break;
+                case "answers_asc":
+                    questions = questions.OrderBy(q => q.Answers.Count);
+                    break;
+                case "answers_desc":
+                    questions = questions.OrderByDescending(q => q.Answers.Count);
+                    break;
+            }
 
             //PAGINATIE
             int totalItems = questions.Count();
@@ -85,9 +105,8 @@ namespace ProiectStackOverflow.Controllers
             var paginatedQuestions = questions.Skip(offset).Take(page_questions);
             ViewBag.lastPage = Math.Ceiling((float)totalItems / (float)page_questions);
             ViewBag.CurrentPage = currentPage;
-            ViewBag.PaginationBaseUrl = $"/Questions/HomeIndex/?page";
-
             ViewBag.Questions = paginatedQuestions;
+            ViewBag.PaginationBaseUrl = $"/Questions/HomeIndex/?page";
 
             /*if (!string.IsNullOrEmpty(search))
             {
@@ -103,6 +122,7 @@ namespace ProiectStackOverflow.Controllers
                 }
             }*/
 
+
             ViewBag.SearchString = search;
             if (search != "")
             {
@@ -114,17 +134,42 @@ namespace ProiectStackOverflow.Controllers
                 ViewBag.PaginationBaseUrl = "/Questions/HomeIndex/?page";
             }
 
+            // Setează ViewBag.SortOrder pentru a păstra starea sortării
+            ViewBag.SortOrder = sortOrder;
+            ViewBag.PaginationBaseUrl = $"/Questions/HomeIndex/?sortOrder={sortOrder}&page";
+
             return View();
         }
 
-        public IActionResult Index(int id)
+        public IActionResult Index(int id, int? page, string sortOrder)
         {
             int page_questions = 5;
 
             var questions = from question in db.Questions.Include("Tag")
                     .Include("User")
+                    .Include(q => q.Answers) // Adăugat pentru a putea sorta după numărul de răspunsuri
                 where question.TagId == id
                 select question;
+
+            // Sortează întrebările
+            switch (sortOrder)
+            {
+                case "date_asc":
+                    questions = questions.OrderBy(q => q.Date);
+                    break;
+                case "date_desc":
+                    questions = questions.OrderByDescending(q => q.Date);
+                    break;
+                case "answers_asc":
+                    questions = questions.OrderBy(q => q.Answers.Count);
+                    break;
+                case "answers_desc":
+                    questions = questions.OrderByDescending(q => q.Answers.Count);
+                    break;
+                default:
+                    questions = questions.OrderByDescending(q => q.Date); // Sortare implicită
+                    break;
+            }
 
             int totalItems = questions.Count();
 
@@ -139,11 +184,16 @@ namespace ProiectStackOverflow.Controllers
             var paginatedQuestions = questions.Skip(offset).Take(page_questions);
             ViewBag.lastPage = Math.Ceiling((float)totalItems / (float)page_questions);
             ViewBag.CurrentPage = currentPage;
-            ViewBag.PaginationBaseUrl = $"/Questions/Index/{id}?page";
+
+            // Modifică ViewBag.PaginationBaseUrl pentru a include sortOrder
+            ViewBag.PaginationBaseUrl = $"/Questions/Index/{id}?sortOrder={sortOrder}&page";
 
             Tag tag = db.Tags.Where(t => t.Id == id).First();
             ViewBag.Tag = tag;
             ViewBag.Questions = paginatedQuestions;
+
+            // Adaugă ViewBag.SortOrder pentru a menține starea sortării
+            ViewBag.SortOrder = sortOrder;
 
             if (TempData.ContainsKey("message"))
             {
@@ -154,7 +204,44 @@ namespace ProiectStackOverflow.Controllers
             return View();
         }
 
-        public IActionResult Show(int id)
+        // public IActionResult Index(int id)
+        // {
+        //     int page_questions = 5;
+        //
+        //     var questions = from question in db.Questions.Include("Tag")
+        //             .Include("User")
+        //         where question.TagId == id
+        //         select question;
+        //
+        //     int totalItems = questions.Count();
+        //
+        //     var currentPage = Convert.ToInt32(HttpContext.Request.Query["page"]);
+        //
+        //     var offset = 0;
+        //     if (!currentPage.Equals(0))
+        //     {
+        //         offset = (currentPage - 1) * page_questions;
+        //     }
+        //
+        //     var paginatedQuestions = questions.Skip(offset).Take(page_questions);
+        //     ViewBag.lastPage = Math.Ceiling((float)totalItems / (float)page_questions);
+        //     ViewBag.CurrentPage = currentPage;
+        //     ViewBag.PaginationBaseUrl = $"/Questions/Index/{id}?page";
+        //
+        //     Tag tag = db.Tags.Where(t => t.Id == id).First();
+        //     ViewBag.Tag = tag;
+        //     ViewBag.Questions = paginatedQuestions;
+        //
+        //     if (TempData.ContainsKey("message"))
+        //     {
+        //         //ViewBag.Message = TempData["message"];
+        //         //ViewBag.Alert = TempData["messageType"];
+        //     }
+        //
+        //     return View();
+        // }
+
+        public IActionResult Show(int id, string sortOrder)
         {
             Question question = db.Questions.Include("Tag")
                 .Include("Comments")
@@ -165,7 +252,22 @@ namespace ProiectStackOverflow.Controllers
                 .Where(q => q.Id == id)
                 .First();
 
+            switch (sortOrder)
+            {
+                case "date_asc":
+                    question.Answers = question.Answers.OrderBy(a => a.Date).ToList();
+                    break;
+                case "date_desc":
+                    question.Answers = question.Answers.OrderByDescending(a => a.Date).ToList();
+                    break;
+                default:
+                    question.Answers = question.Answers.OrderByDescending(a => a.Date).ToList(); // Sortare implicită (descrescător după dată)
+                    break;
+            }
+            
             SetAccesRights();
+            
+            ViewBag.SortOrder = sortOrder;
 
             return View(question);
         }
