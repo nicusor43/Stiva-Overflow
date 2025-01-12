@@ -4,7 +4,7 @@
 	string sortOrderAnswers = ViewBag.SortOrder == "answers_asc" ? "▲" : "▼";
 }
 
-<div class="d-inline-flex justify-content-between w-100">
+<div class="d-inline-flex justify-content-between w-100 mb-3">
 	<div>
 		@if(@ViewBag.UserCurent != null)
 		{
@@ -45,7 +45,9 @@
 				</h3>
 				<div class="card-text description">@Html.Raw(q.Content)</div>
 				<div class="d-flex justify-content-between flex-row mt-5">
-					<div><i class="bi bi-person"></i><a href="@Url.Action("Index", "Profile", new { id = q.UserId })">@q.User.UserName</a></div>
+					<div><i class="bi bi-person"></i>
+						<a class="utilizator" href="@Url.Action("Index", "Profile", new { id = q.UserId })">@q.User.UserName</a>
+					</div>
 
 					<div> @q.Tag.TagName</div>
 

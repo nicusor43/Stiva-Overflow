@@ -110,3 +110,22 @@ a.nav-link {
     color: #2d3436;
     border-color: #2d3436;
 }
+
+.content 
+{
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+.utilizator 
+{
+    color: #333; /* Culoare pentru link-uri */
+    text-decoration: none; /* Eliminã sublinierea */
+}
+
+.utilizator:hover 
+{
+    color: #636e72;
+}
+
