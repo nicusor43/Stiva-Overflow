@@ -36,27 +36,34 @@ namespace ProiectStackOverflow.Models
                 var hasher = new PasswordHasher<ApplicationUser>();
 
                 context.Users.AddRange(
-                new ApplicationUser
-                {
+                    new ApplicationUser
+                    {
+                        Id = "8e445865-a24d-4543-a6c6-9443d048cdb0",
+                        UserName = "admin@test.com",
+                        EmailConfirmed = true,
+                        NormalizedEmail = "ADMIN@TEST.COM",
+                        Email = "admin@test.com",
+                        NormalizedUserName = "ADMIN@TEST.COM",
+                        PasswordHash = hasher.HashPassword(null, "Admin1!"),
+                        FirstName = "Admin",  // Adaugă câmpuri pentru FirstName și LastName
+                        LastName = "User"
+                    },
+                    new ApplicationUser
+                    {
+                        Id = "8e445865-a24d-4543-a6c6-9443d048cdb2",
+                        UserName = "user@test.com",
+                        EmailConfirmed = true,
+                        NormalizedEmail = "USER@TEST.COM",
+                        Email = "user@test.com",
+                        NormalizedUserName = "USER@TEST.COM",
+                        PasswordHash = hasher.HashPassword(null, "User1!"),
+                        FirstName = "User",  // Adaugă câmpuri pentru FirstName și LastName
+                        LastName = "Normal"
+                    }
+                );
 
-                    Id = "8e445865-a24d-4543-a6c6-9443d048cdb0",
-                    UserName = "admin@test.com",
-                    EmailConfirmed = true,
-                    NormalizedEmail = "ADMIN@TEST.COM",
-                    Email = "admin@test.com",
-                    NormalizedUserName = "ADMIN@TEST.COM",
-                    PasswordHash = hasher.HashPassword(null, "Admin1!")
-                },
-                new ApplicationUser
-                {
-                    Id = "8e445865-a24d-4543-a6c6-9443d048cdb2",
-                    UserName = "user@test.com",
-                    EmailConfirmed = true,
-                    NormalizedEmail = "USER@TEST.COM",
-                    Email = "user@test.com",
-                    NormalizedUserName = "USER@TEST.COM",
-                    PasswordHash = hasher.HashPassword(null, "User1!")
-                });
+                context.SaveChanges();
+
 
                 // ASOCIEREA USER-ROLE
                 context.UserRoles.AddRange(

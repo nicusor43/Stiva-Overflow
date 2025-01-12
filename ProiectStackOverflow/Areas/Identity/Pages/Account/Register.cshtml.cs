@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading;
@@ -71,6 +72,9 @@ namespace ProiectStackOverflow.Areas.Identity.Pages.Account
         /// </summary>
         public class InputModel
         {
+            [Required]
+            [Display(Name = "Username")]
+            public string UserName { get; set; }
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
@@ -79,6 +83,8 @@ namespace ProiectStackOverflow.Areas.Identity.Pages.Account
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
+            
+            
 
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -98,6 +104,16 @@ namespace ProiectStackOverflow.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+            
+            #nullable enable
+            [Display(Name = "First Name")]
+            public string? FirstName { get; set; }
+
+            [Display(Name = "Last Name")]
+            public string? LastName { get; set; }
+
+            [Display(Name = "Description")]
+            public string? Description { get; set; }
         }
 
 
@@ -115,9 +131,13 @@ namespace ProiectStackOverflow.Areas.Identity.Pages.Account
             {
                 var user = CreateUser();
 
-                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
+                await _userStore.SetUserNameAsync(user, Input.UserName, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
+                
+                user.FirstName = Input.FirstName;
+                user.LastName = Input.LastName;
+                user.Description = Input.Description;
 
                 if (result.Succeeded)
                 {
