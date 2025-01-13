@@ -415,12 +415,18 @@ namespace ProiectStackOverflow.Controllers
 
         //Pentru comentarii
         [HttpPost]
-        [Authorize(Roles = "Admin, User")]
+        //[Authorize(Roles = "Admin, User")]
         public IActionResult ShowComm([FromForm] Comment comment)
         {
             comment.Date = DateTime.Now;
 
             comment.UserId = _userManager.GetUserId(User);
+
+            if (!User.Identity.IsAuthenticated)
+            {
+                // Setează URL-ul corect pentru redirecționare după login
+                return Redirect("/Identity/Account/Login?ReturnUrl=/Questions/Show/" + comment.QuestionId);
+            }
 
             if (ModelState.IsValid)
             {
@@ -437,11 +443,17 @@ namespace ProiectStackOverflow.Controllers
 
         //Pentru raspunsuri
         [HttpPost]
-        [Authorize(Roles = "Admin, User")]
+        //[Authorize(Roles = "Admin, User")]
         public IActionResult ShowAns([FromForm] Answer answer)
         {
             answer.Date = DateTime.Now;
             answer.UserId = _userManager.GetUserId(User);
+
+            if (!User.Identity.IsAuthenticated)
+            {
+                // Setează URL-ul corect pentru redirecționare după login
+                return Redirect("/Identity/Account/Login?ReturnUrl=/Questions/Show/" + answer.QuestionId);
+            }
 
             if (ModelState.IsValid)
             {
