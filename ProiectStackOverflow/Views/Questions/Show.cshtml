@@ -14,7 +14,9 @@
             <a class="utilizator" href="@Url.Action("Index", "Profile", new { id = @Model.UserId })">
                 @Model.User.UserName</a>
         </div>
-        <span class="alert-info">@Model.Date</span>
+        <div>
+            <span class="alert-info">@Model.Date</span>
+        </div>
 
     </div>
 </div>
@@ -39,7 +41,7 @@
     </div>
 }
 
-<div class="container">
+<div class="container m-3">
     <div class="row">
         <div class="col-md-2"></div>
             <div class="col-md-8">
@@ -51,7 +53,7 @@
 
 @foreach (var comm in Model.Comments)
 {
-    <div class="container">
+    <div class="container m-2">
         <div class="row">
             <div class="col-md-2"></div>
 
@@ -62,7 +64,7 @@
                     <p class="content">@comm.Content</p>
                     <small>@comm.Date</small>
                     <strong>
-                        <i class="bi bi-person"></i><a href="@Url.Action("Index", "Profile", new { id = comm.UserId })">@comm.User.UserName</a>
+                        <i class="bi bi-person"></i><a class="utilizator" href="@Url.Action("Index", "Profile", new { id = comm.UserId })">@comm.User.UserName</a>
                     </strong>
 
                 </div>
@@ -103,7 +105,7 @@
     </div>
 }
 
-<div class="container">
+<div class="container m-2">
 
     <div class="row">
 
@@ -137,7 +139,7 @@
 
 </div>
 
-<div class="container">
+<div class="container m-3">
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
@@ -171,7 +173,7 @@
 
 @foreach (var ans in Model.Answers)
 {
-    <div class="container">
+    <div class="container m-2">
         <div class="row">
             <div class="col-md-1"></div>
 
@@ -182,11 +184,10 @@
                     <p class="content">@ans.Content</p>
                     <small>@ans.Date</small>
                     <strong>
-                        <i class="bi bi-person"></i><a href="@Url.Action("Index", "Profile", new { id = ans.UserId })">@ans.User.UserName</a>
+                        <i class="bi bi-person"></i><a class="utilizator" href="@Url.Action("Index", "Profile", new { id = ans.UserId })">@ans.User.UserName</a>
                     </strong>
 
                 </div>
-                <br>
 
                 @if (ans.UserId == ViewBag.UserCurent || ViewBag.Admin)
                 {
@@ -224,7 +225,7 @@
     </div>
 }
 
-<div class="container">
+<div class="container m-2">
 
     <div class="row">
 
