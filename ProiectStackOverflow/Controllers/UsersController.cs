@@ -18,21 +18,24 @@ namespace ProiectStackOverflow.Controllers
 
         private readonly RoleManager<IdentityRole> _roleManager;
 
+        private readonly QuestionsController _questionsController;
+
         public UsersController(
             ApplicationDbContext context,
             UserManager<ApplicationUser> userManager,
             RoleManager<IdentityRole> roleManager
-            )
+        )
         {
             db = context;
             _userManager = userManager;
             _roleManager = roleManager;
         }
+
         public IActionResult Index()
         {
             var users = from user in db.Users
-                        orderby user.UserName
-                        select user;
+                orderby user.UserName
+                select user;
 
             ViewBag.UsersList = users;
 
@@ -61,9 +64,9 @@ namespace ProiectStackOverflow.Controllers
 
             // Cautam ID-ul rolului in baza de date
             ViewBag.UserRole = _roleManager.Roles
-                                              .Where(r => roleNames.Contains(r.Name))
-                                              .Select(r => r.Id)
-                                              .First(); // Selectam 1 singur rol
+                .Where(r => roleNames.Contains(r.Name))
+                .Select(r => r.Id)
+                .First(); // Selectam 1 singur rol
 
             return View(user);
         }
@@ -93,13 +96,14 @@ namespace ProiectStackOverflow.Controllers
                     // Scoatem userul din rolurile anterioare
                     await _userManager.RemoveFromRoleAsync(user, role.Name);
                 }
+
                 // Adaugam noul rol selectat
                 var roleName = await _roleManager.FindByIdAsync(newRole);
                 await _userManager.AddToRoleAsync(user, roleName.ToString());
 
                 db.SaveChanges();
-
             }
+
             return RedirectToAction("Index");
         }
 
@@ -108,25 +112,17 @@ namespace ProiectStackOverflow.Controllers
         public IActionResult Delete(string id)
         {
             var user = db.Users
-                         .Include("Questions")
-                         .Include("Comments")
-                         .Include("Answers")
-                         .Where(u => u.Id == id)
-                         .First();
+                .Include("Questions")
+                .Include("Comments")
+                .Include("Answers")
+                .Where(u => u.Id == id)
+                .First();
 
             if (user.Comments.Count > 0)
             {
                 foreach (var comment in user.Comments)
                 {
                     db.Comments.Remove(comment);
-                }
-            }
-
-            if (user.Questions.Count > 0)
-            {
-                foreach (var question in user.Questions)
-                {
-                    db.Questions.Remove(question);
                 }
             }
 
@@ -137,6 +133,23 @@ namespace ProiectStackOverflow.Controllers
                     db.Answers.Remove(answer);
                 }
             }
+
+            if (user.Questions.Count > 0)
+            {
+                foreach (var q in user.Questions)
+                {
+                    Question question = db.Questions.Include("Tag")
+                        .Include("Comments")
+                        .Include("Answers")
+                        .Include("User")
+                        .Include("Comments.User")
+                        .Where(qq => qq.Id == q.Id)
+                        .First();
+                    db.Questions.Remove(question);
+                }
+            }
+
+            db.SaveChanges();
 
             db.ApplicationUsers.Remove(user);
 
@@ -152,7 +165,7 @@ namespace ProiectStackOverflow.Controllers
             var selectList = new List<SelectListItem>();
 
             var roles = from role in db.Roles
-                        select role;
+                select role;
 
             foreach (var role in roles)
             {
@@ -162,6 +175,7 @@ namespace ProiectStackOverflow.Controllers
                     Text = role.Name.ToString()
                 });
             }
+
             return selectList;
         }
     }

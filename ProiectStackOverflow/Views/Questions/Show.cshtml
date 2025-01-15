@@ -8,7 +8,7 @@
     <div class="content">@Html.Raw(Model.Content)</div>
     <div class="d-flex justify-content-between flex-row mt-5">
 
-        <a class="btn alert-secondary" href="/Questions/Index/@Model.TagId">@Model.Tag.TagName</a>
+        <a class="btn tag-blue" href="/Questions/Index/@Model.TagId">@Model.Tag.TagName</a>
 
         <div><i class="bi bi-person"></i>
             <a class="utilizator" href="@Url.Action("Index", "Profile", new { id = @Model.UserId })">
