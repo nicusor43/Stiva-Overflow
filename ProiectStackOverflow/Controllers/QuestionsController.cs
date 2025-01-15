@@ -64,7 +64,15 @@ namespace ProiectStackOverflow.Controllers
                     c => c.Content.Contains(search)
                 ).Select(c => (int)c.QuestionId).ToList();
 
-            List<int> mergedIds = questionIds.Union(questionIdsOfCommentsWithSearchString).ToList();
+            List<int> questionIdsOfAnswersWithSearchString =
+                db.Answers.Where
+                (
+                    a => a.Content.Contains(search)
+                ).Select(a => (int)a.QuestionId).ToList();
+
+            List<int> mergedIds = questionIds.Union(questionIdsOfCommentsWithSearchString)
+                                             .Union(questionIdsOfAnswersWithSearchString)
+                                             .ToList();
 
             questions = db.Questions.Where(question =>
                     mergedIds.Contains(question.Id))
@@ -372,6 +380,7 @@ namespace ProiectStackOverflow.Controllers
                 .Include("Answers")
                 .Include("User")
                 .Include("Comments.User")
+                .Include("Answers.User")
                 .Where(q => q.Id == id)
                 .First();
 

@@ -180,8 +180,7 @@
             <div class="col-md-10">
 
                 <div>
-
-                    <p class="content">@ans.Content</p>
+                    <p class="content">@Html.Raw(ans.Content)</p>
                     <small>@ans.Date</small>
                     <strong>
                         <i class="bi bi-person"></i><a class="utilizator" href="@Url.Action("Index", "Profile", new { id = ans.UserId })">@ans.User.UserName</a>
@@ -240,9 +239,9 @@
                         <input type="hidden" name="QuestionId" value="@Model.Id"/>
                         <label>Answer</label>
 
-                        <textarea class="form-control" name="Content"></textarea>
+                        <textarea class="form-control summernote" name="Content"></textarea>
                         <span asp-validation-for="Answer.Content" class="text-danger"></span>
-                       
+                        
                         <button class="btn alert-secondary m-3" type="submit">
                             Add answer
                         </button>
