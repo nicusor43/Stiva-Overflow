@@ -334,25 +334,23 @@ namespace ProiectStackOverflow.Controllers
         {
             Question question = db.Questions.Find(id);
 
-            var sanitizer = new HtmlSanitizer();
+            //var sanitizer = new HtmlSanitizer();
 
             if (ModelState.IsValid)
             {
                 if (question.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
                 {
                     //requestQuestion.Content = sanitizer.Sanitize(requestQuestion.Content);
+
                     question.Title = requestQuestion.Title;
                     question.Content = requestQuestion.Content;
                     question.TagId = requestQuestion.TagId;
-                    //TempData["message"] = "Articolul a fost modificat";
-                    //TempData["messageType"] = "alert-success";
+
                     db.SaveChanges();
                     return RedirectToAction("Show", new { id = id });
                 }
                 else
                 {
-                    //TempData["message"] = "Nu aveti dreptul sa faceti modificari";
-                    //TempData["messageType"] = "alert-danger";
                     return RedirectToAction("Show", new { id = id });
                 }
             }
