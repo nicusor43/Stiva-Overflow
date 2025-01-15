@@ -5,5 +5,6 @@ namespace ProiectStackOverflow.Models
 	    public ApplicationUser User { get; set; }
 	    public List<Question> RecentQuestions { get; set; }
 	    public List<Answer> RecentAnswers { get; set; }
+	    public List<Comment> RecentComments { get; set; }
 	}
 }

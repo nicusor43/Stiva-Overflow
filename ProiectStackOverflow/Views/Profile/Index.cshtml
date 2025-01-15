@@ -4,10 +4,15 @@
     ViewData["Title"] = Model.User.UserName+"'s profile";
 }
 
+@{
+    var currentUserId = ViewData["CurrentUserId"].ToString(); // Preia ID-ul utilizatorului curent din ViewData
+}
+
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-            <h2>@ViewData["Title"]</h2>
+            <h2 style="background-color: #D4DAC5; display: inline-block; border-radius: 5px; padding: 5px">
+                @ViewData["Title"]</h2>
             <hr />
 
             <p><strong>UserName:</strong> @Model.User.UserName</p>
@@ -22,7 +27,8 @@
 
             <hr />
 
-            <h3>Recent Activity</h3>
+            <h3 style="background-color: #D4DAC5; display: inline-block; border-radius: 5px; padding: 5px">
+                Recent Activity</h3>
 
             @if (Model.RecentQuestions.Any() || Model.RecentAnswers.Any())
             {
@@ -47,12 +53,28 @@
                         }
                     </ul>
                 }
+
+                @if (Model.RecentComments.Any())
+                {
+                    <h4>Last Comments:</h4>
+                    <ul>
+                        @foreach (var comment in Model.RecentComments)
+                        {
+                            <li>@comment.Content.Substring(0, Math.Min(comment.Content.Length, 50)) to the question: <a href="/Questions/Show/@comment.QuestionId">@comment.Question.Title</a> (@comment.Date.ToString("dd.MM.yyyy HH:mm"))</li>
+                        }
+                    </ul>
+                }
             }
             else
             {
                 <p>There is no recent activity.</p>
             }
-            <a class="nav-link text-dark alert-info mb-3" style="display: inline-block;" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Manage Account</a>
+            
+            @if (currentUserId == Model.User.Id)
+            {
+                <a class="nav-link text-dark mb-3" style="background-color: #99BECF; display: inline-block; border-radius: 3px;" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
+                    Manage Account</a>
+            }
         </div>
         <div class="col-md-4">
             </div>

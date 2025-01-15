@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +16,7 @@ public class ProfileController : Controller
         _userManager = userManager;
     }
 
+    [Authorize(Roles = "Admin, User")]
     public async Task<IActionResult> Index(string id)
     {
         ApplicationUser user;
@@ -50,13 +52,25 @@ public class ProfileController : Controller
             .Take(5)
             .ToListAsync();
 
+        // Preia ultimele 5 comentarii
+        var recentComments = await _context.Comments
+            .Where(c => c.UserId == user.Id)
+            .OrderByDescending(c => c.Date)
+            .Include(c => c.Question)
+            .Take(5)
+            .ToListAsync();
+
         // Crează un ViewModel pentru a trimite datele către View
         var viewModel = new Profile()
         {
             User = user,
             RecentQuestions = recentQuestions,
-            RecentAnswers = recentAnswers
+            RecentAnswers = recentAnswers,
+            RecentComments = recentComments
         };
+
+        var currentUserId = _userManager.GetUserId(User);
+        ViewData["CurrentUserId"] = currentUserId;
 
         return View(viewModel);
     }
