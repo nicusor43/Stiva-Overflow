@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\stuff\\github\\proiect_asp.net\\proiectstackoverflow\\views\\questions\\homeindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:views\\questions\\homeindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\stuff\\github\\proiect_asp.net\\proiectstackoverflow\\views\\questions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:views\\questions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\stuff\\github\\proiect_asp.net\\proiectstackoverflow\\wwwroot\\js\\summernote.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:wwwroot\\js\\summernote.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,28 +30,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Questions\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Questions\\Index.cshtml",
-              "ToolTip": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Questions\\Index.cshtml",
-              "RelativeToolTip": "Views\\Questions\\Index.cshtml",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAADQAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-15T14:28:54.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HomeIndex.cshtml",
-              "DocumentMoniker": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Questions\\HomeIndex.cshtml",
-              "RelativeDocumentMoniker": "Views\\Questions\\HomeIndex.cshtml",
-              "ToolTip": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Questions\\HomeIndex.cshtml*",
-              "RelativeToolTip": "Views\\Questions\\HomeIndex.cshtml*",
-              "ViewState": "AQIAACUAAAAAAAAAAAAIwGYAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-15T14:28:53.122Z",
+              "Title": "SummerNote.js",
+              "DocumentMoniker": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\wwwroot\\js\\SummerNote.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\SummerNote.js",
+              "ToolTip": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\wwwroot\\js\\SummerNote.js*",
+              "RelativeToolTip": "wwwroot\\js\\SummerNote.js*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-01-15T15:24:14.646Z",
               "EditorCaption": ""
             }
           ]

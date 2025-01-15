@@ -5,6 +5,6 @@
         placeholder: 'Your content goes here...',
         tabsize: 2,
         minHeight: 200,
-        focus: true,
+        focus: false,
 });
 });
