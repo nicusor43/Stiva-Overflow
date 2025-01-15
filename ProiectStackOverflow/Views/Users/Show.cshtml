@@ -9,9 +9,24 @@
 
             <p><i class="bi bi-envelope"></i> Email utilizator: @Model.Email</p>
 
+            @if (@Model.FirstName != null)
+            {
+                <p><i class="bi bi-person"> </i> Prenume utilizator: @Model.FirstName</p>
+            }
+
+            @if (@Model.LastName != null)
+            {
+                <p><i class="bi bi-person"> </i> Nume utilizator: @Model.LastName</p>
+            }
+
+            @if (@Model.PhoneNumber != null)
+            {
+                <p><i class="bi bi-phone"></i> Telefon utilizator: @Model.PhoneNumber</p>
+            }
+
             @if (ViewBag.Roles.Count > 0)
             {
-                <p><i class="bi bi-person"> </i> Roluri utilizator:</p>
+                <p><i class="bi bi-person"> </i> Rol utilizator:</p>
                 @foreach (var role in ViewBag.Roles)
                 {
                     <span class="rounded-pill bg-dark mr-2 px-4 py-2 text-white">@role</span>

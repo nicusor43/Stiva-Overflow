@@ -206,12 +206,6 @@ namespace ProiectStackOverflow.Controllers
             // Adaugă ViewBag.SortOrder pentru a menține starea sortării
             ViewBag.SortOrder = sortOrder;
 
-            if (TempData.ContainsKey("message"))
-            {
-                //ViewBag.Message = TempData["message"];
-                //ViewBag.Alert = TempData["messageType"];
-            }
-
             return View();
         }
 

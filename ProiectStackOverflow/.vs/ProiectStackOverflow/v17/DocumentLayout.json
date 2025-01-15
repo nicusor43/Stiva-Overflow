@@ -3,8 +3,19 @@
   "WorkspaceRootPath": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\stuff\\github\\proiect_asp.net\\proiectstackoverflow\\wwwroot\\js\\summernote.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:wwwroot\\js\\summernote.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_ProiectStackOverflow_282af91a_cb91_4e50_a45d_a7cc60462f56/True/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\stuff\\github\\proiect_asp.net\\proiectstackoverflow\\areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\stuff\\github\\proiect_asp.net\\proiectstackoverflow\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|c:\\stuff\\github\\proiect_asp.net\\proiectstackoverflow\\views\\users\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{545CA521-3E7B-443D-BDE7-36E2765248C4}|ProiectStackOverflow.csproj|solutionrelative:views\\users\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,14 +42,50 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SummerNote.js",
-              "DocumentMoniker": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\wwwroot\\js\\SummerNote.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\SummerNote.js",
-              "ToolTip": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\wwwroot\\js\\SummerNote.js*",
-              "RelativeToolTip": "wwwroot\\js\\SummerNote.js*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-01-15T15:24:14.646Z",
+              "Title": "dbo.AspNetUsers [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_ProiectStackOverflow_282af91a_cb91_4e50_a45d_a7cc60462f56/True/SqlTable/dbo.AspNetUsers.sql",
+              "ToolTip": "dbo.AspNetUsers [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-01-15T19:39:53.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Users\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\Edit.cshtml",
+              "ToolTip": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Views\\Users\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Users\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-15T19:36:50.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "ToolTip": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFMAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T19:13:06.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "ToolTip": "C:\\Stuff\\GitHub\\Proiect_ASP.Net\\ProiectStackOverflow\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAIwAkAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-15T19:10:08.425Z",
               "EditorCaption": ""
             }
           ]

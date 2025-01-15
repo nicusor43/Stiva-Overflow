@@ -30,7 +30,7 @@ namespace ProiectStackOverflow.Areas.Identity.Pages.Account.Manage
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
         ///     directly from your code. This API may change or be removed in future releases.
         /// </summary>
-        public string Username { get; set; }
+        //public string UserName { get; set; }
 
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -56,6 +56,15 @@ namespace ProiectStackOverflow.Areas.Identity.Pages.Account.Manage
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
+            [Display(Name = "Nume Utilizator")]
+            public string UserName { get; set; }
+
+            [Display(Name = "First Name")]
+            public string FirstName { get; set; }
+
+            [Display(Name = "Last Name")]
+            public string LastName { get; set; }
+
             [Phone]
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
@@ -69,12 +78,15 @@ namespace ProiectStackOverflow.Areas.Identity.Pages.Account.Manage
             var userName = await _userManager.GetUserNameAsync(user);
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
 
-            Username = userName;
+            //UserName = userName;
             
             Input = new InputModel
             {
+                UserName = userName,
                 PhoneNumber = phoneNumber,
-                Description = user.Description
+                Description = user.Description,
+                FirstName = user.FirstName, 
+                LastName = user.LastName
             };
         }
 
@@ -104,7 +116,11 @@ namespace ProiectStackOverflow.Areas.Identity.Pages.Account.Manage
                 return Page();
             }
 
+            user.UserName = Input.UserName;
+            user.FirstName = Input.FirstName;
+            user.LastName = Input.LastName;
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
+
             if (Input.PhoneNumber != phoneNumber)
             {
                 var setPhoneResult = await _userManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
@@ -118,6 +134,7 @@ namespace ProiectStackOverflow.Areas.Identity.Pages.Account.Manage
             user.Description = Input.Description;
             
             var updateResult = await _userManager.UpdateAsync(user);
+
             if (!updateResult.Succeeded)
             {
                 
@@ -130,5 +147,6 @@ namespace ProiectStackOverflow.Areas.Identity.Pages.Account.Manage
             StatusMessage = "Your profile has been updated";
             return RedirectToPage();
         }
+
     }
 }

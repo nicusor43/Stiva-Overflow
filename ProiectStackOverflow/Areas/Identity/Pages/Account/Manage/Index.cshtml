@@ -12,8 +12,18 @@
         <form id="profile-form" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
             <div class="form-floating mb-3">
-                <input asp-for="Username" class="form-control" placeholder="Please choose your username."/>
-                <label asp-for="Username" class="form-label"></label>
+                <input asp-for="Input.UserName" class="form-control" placeholder="Please choose your username."/>
+                <label asp-for="Input.UserName" class="form-label"></label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.FirstName" class="form-control" placeholder="FirstName" />
+                <label asp-for="Input.FirstName" class="form-label"></label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.LastName" class="form-control" placeholder="LastName" />
+                <label asp-for="Input.LastName" class="form-label"></label>
             </div>
 
             <div class="form-floating mb-3">
