@@ -1,8 +1,4 @@
-﻿
-<br />
-<br />
-
-<div class="row">
+﻿<div class="row">
 @foreach (var user in ViewBag.UsersList)
 {
     <div class="col-4 mb-4">
@@ -34,11 +30,11 @@
                 <div class="d-flex flex-row justify-content-between p-3">
 
                     <div>
-                        <a asp-controller="Users" asp-action="Edit" asp-route-id="@user.Id" class="btn btn-sm alert-success">Editare utilizator</a>
+                        <a asp-controller="Users" asp-action="Edit" asp-route-id="@user.Id" class="btn btn-sm alert-success m-3">Editare utilizator</a>
                     </div>
 
                     <div>
-                        <a asp-controller="Users" asp-action="Show" asp-route-id="@user.Id" class="btn btn-sm alert-success">Vizualizare utilizator</a>
+                        <a asp-controller="Users" asp-action="Show" asp-route-id="@user.Id" class="btn btn-sm alert-success m-3">Vizualizare utilizator</a>
                     </div>
 
                 </div>

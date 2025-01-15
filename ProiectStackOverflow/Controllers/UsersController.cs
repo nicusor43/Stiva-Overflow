@@ -124,8 +124,15 @@ namespace ProiectStackOverflow.Controllers
 
             if (user.Questions.Count > 0)
             {
-                foreach (var question in user.Questions)
+                foreach (var q in user.Questions)
                 {
+                    Question question = db.Questions.Include("Tag")
+                                        .Include("Comments")
+                                        .Include("Answers")
+                                        .Include("User")
+                                        .Include("Comments.User")
+                                        .Where(qq => qq.Id == q.Id)
+                                        .First();
                     db.Questions.Remove(question);
                 }
             }
