@@ -10,6 +10,7 @@
             <h2>@ViewData["Title"]</h2>
             <hr />
 
+            <p><strong>UserName:</strong> @Model.User.UserName</p>
             <p><strong>Name:</strong> @(Model.User.FirstName + " " + Model.User.LastName)</p>
             <p><strong>Email:</strong> @Model.User.Email</p>
             
@@ -51,6 +52,7 @@
             {
                 <p>There is no recent activity.</p>
             }
+            <a class="nav-link text-dark alert-info mb-3" style="display: inline-block;" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Manage Account</a>
         </div>
         <div class="col-md-4">
             </div>
