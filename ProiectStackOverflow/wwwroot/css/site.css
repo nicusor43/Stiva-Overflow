@@ -1,11 +1,11 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -13,12 +13,12 @@ html {
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 
 .navbar {
@@ -31,17 +31,17 @@ a.nav-link {
     color: #2c2c2c !important;
 }
 
-    a.nav-link:hover {
-        color: #57606f !important;
-    }
+a.nav-link:hover {
+    color: #57606f !important;
+}
 
 .logoutbtn {
     color: #2c2c2c !important;
 }
 
-    .logoutbtn:hover {
-        color: #57606f !important;
-    }
+.logoutbtn:hover {
+    color: #57606f !important;
+}
 
 .note-editor .dropdown-toggle::after {
     display: none;
@@ -59,9 +59,9 @@ a.nav-link {
     font-family: 'Permanent Marker', cursive;
 }
 
-    .font-logo:hover {
-        color: #57606f !important;
-    }
+.font-logo:hover {
+    color: #57606f !important;
+}
 
 .footer-position {
     position: fixed;
@@ -82,13 +82,14 @@ a.nav-link {
     /* Limit the text block to x lines */
     -webkit-line-clamp: 5;
 }
+
 /*Pentru descrierea intrebarilor*/
 .description {
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Numãrul de rânduri */
+    -webkit-line-clamp: 2; /* Numï¿½rul de rï¿½nduri */
     -webkit-box-orient: vertical;
     overflow: hidden;
-    max-height: 3em; /* Înãl?imea a douã rânduri */
+    max-height: 3em; /* ï¿½nï¿½l?imea a douï¿½ rï¿½nduri */
 }
 
 /*paginare*/
@@ -99,10 +100,9 @@ a.nav-link {
     border: 1px solid #2d3436;
 }
 
-.pagination .page-link:hover 
-{
-    background-color: #b2bec3; 
-    color: #636e72; 
+.pagination .page-link:hover {
+    background-color: #b2bec3;
+    color: #636e72;
 }
 
 .pagination .page-item.active .page-link {
@@ -111,23 +111,35 @@ a.nav-link {
     border-color: #2d3436;
 }
 
-.content 
-{
+.content {
     word-wrap: break-word;
     white-space: normal;
     overflow-wrap: break-word;
 }
 
-.utilizator 
-{
+.utilizator {
     color: #333; /* Culoare pentru link-uri */
-    text-decoration: none; /* Eliminã sublinierea */
+    text-decoration: none; /* Eliminï¿½ sublinierea */
 }
 
-.utilizator:hover 
-{
+.utilizator:hover {
     color: #636e72;
 }
 
 
+.tag-container {
+    /* Stiluri pentru containerul tag-ului, de exemplu: */
+    white-space: nowrap; /* Previne trecerea tag-ului pe o nouÄƒ linie */
+}
+
+.float-right {
+    float: right;
+}
+
+.tag-blue {
+    background-color: #cddfea; /* SeteazÄƒ culoarea de fundal la albastru */
+    color: black; /* Optional: SchimbÄƒ culoarea textului la alb pentru contrast */
+    padding: 5px 10px; /* Optional: AdaugÄƒ spaÈ›iere Ã®n jurul textului */
+    border-radius: 5px; /* Optional: RotunjeÈ™te colÈ›urile */
+}
 
