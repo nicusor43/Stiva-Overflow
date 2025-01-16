@@ -62,8 +62,9 @@
                         @q.Tag.TagName
                     </a>
 
-                    <span class="position-absolute end-0 alert-info px-1">
-                        @q.Date
+                    <span class="alert-info px-1">
+                        <span class="date">@q.Date.ToShortDateString()</span>
+                        <span class="time">@q.Date.ToShortTimeString()</span>
                     </span>
 
                 </div>
@@ -76,6 +77,7 @@
         {
             ViewBag.CurrentPage = 1;
         }
+
         <div>
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-left m-3">

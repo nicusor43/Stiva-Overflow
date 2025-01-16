@@ -1,7 +1,9 @@
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using ProiectStackOverflow.Helpers
 @model ProiectStackOverflow.Models.Profile
 
 @{
-    ViewData["Title"] = Model.User.UserName+"'s profile";
+    ViewData["Title"] = Model.User.UserName + "'s profile";
 }
 
 @{
@@ -13,19 +15,27 @@
         <div class="col-md-8">
             <h2 style="background-color: #D4DAC5; display: inline-block; border-radius: 5px; padding: 5px">
                 @ViewData["Title"]</h2>
-            <hr />
+            <hr/>
 
-            <p><strong>UserName:</strong> @Model.User.UserName</p>
-            <p><strong>Name:</strong> @(Model.User.FirstName + " " + Model.User.LastName)</p>
-            <p><strong>Email:</strong> @Model.User.Email</p>
-            
+            <p>
+                <strong>UserName:</strong> @Model.User.UserName
+            </p>
+            <p>
+                <strong>Name:</strong> @(Model.User.FirstName + " " + Model.User.LastName)
+            </p>
+            <p>
+                <strong>Email:</strong> @Model.User.Email
+            </p>
+
             @if (!string.IsNullOrEmpty(Model.User.Description))
             {
-                <p><strong>About:</strong></p>
+                <p>
+                    <strong>About:</strong>
+                </p>
                 <p>@Model.User.Description</p>
             }
 
-            <hr />
+            <hr/>
 
             <h3 style="background-color: #D4DAC5; display: inline-block; border-radius: 5px; padding: 5px">
                 Recent Activity</h3>
@@ -49,7 +59,9 @@
                     <ul>
                         @foreach (var answer in Model.RecentAnswers)
                         {
-                            <li>@answer.Content.Substring(0, Math.Min(answer.Content.Length, 50)) to the question: <a href="/Questions/Show/@answer.QuestionId">@answer.Question.Title</a> (@answer.Date.ToString("dd.MM.yyyy HH:mm"))</li>
+                            var content = Summernote.ReplaceRegex(answer.Content);
+                            var contentPreview = content.Length > 50 ? content.Substring(0, 50) : content;
+                            <li>@contentPreview ... to the question: <a href="/Questions/Show/@answer.QuestionId">@answer.Question.Title</a> (@answer.Date.ToString("dd.MM.yyyy HH:mm"))</li>
                         }
                     </ul>
                 }
@@ -77,6 +89,6 @@
             }
         </div>
         <div class="col-md-4">
-            </div>
+        </div>
     </div>
 </div>

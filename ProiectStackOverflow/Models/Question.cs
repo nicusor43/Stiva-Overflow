@@ -12,6 +12,7 @@ namespace ProiectStackOverflow.Models
 		[Required(ErrorMessage = "Title is mandatory")]
 		public string Title { get; set; }
 		[Required(ErrorMessage = "Content is mandatory")]
+		[MinLength(10, ErrorMessage = "The content must be at least 10 characters long.")]
 		public string Content { get; set; }
 		public DateTime Date { get; set; }
 		public string? UserId { get; set; }

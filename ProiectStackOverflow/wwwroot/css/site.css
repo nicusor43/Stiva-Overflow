@@ -143,3 +143,18 @@ a.nav-link:hover {
     border-radius: 5px; /* Optional: Rotunjește colțurile */
 }
 
+.d-flex.flex-row.mt-5 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.date, .time {
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    .date, .time {
+        display: block;
+    }
+}

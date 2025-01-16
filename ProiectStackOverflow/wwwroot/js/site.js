@@ -2,3 +2,11 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+$(document).ready(function () {
+    $('.summernote').summernote({
+        height: 200, // Înălțimea editorului
+        minHeight: null,
+        maxHeight: null,
+        focus: true
+    });
+});

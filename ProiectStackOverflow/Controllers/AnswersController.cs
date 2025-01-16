@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ProiectStackOverflow.Data;
+using ProiectStackOverflow.Helpers;
 using ProiectStackOverflow.Models;
 
 namespace ProiectStackOverflow.Controllers
@@ -65,6 +66,12 @@ namespace ProiectStackOverflow.Controllers
 		public IActionResult Edit(int id, Answer requestAnswer)
         {
             Answer ans = db.Answers.Find(id);
+            
+            if (Summernote.IsEditorEmpty(requestAnswer.Content, 0))
+            {
+	            ModelState.AddModelError("Content", "Content is required.");
+            }
+
 
 			if (ans.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
 			{

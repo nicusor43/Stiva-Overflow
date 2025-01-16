@@ -1,85 +1,97 @@
 ﻿@{
-	ViewBag.Title = "Questions";
-	// Determină ordinea săgeților în funcție de sortarea curentă
-	string sortOrderDate = ViewBag.SortOrder == "date_asc" ? "▲" : "▼";
-	string sortOrderAnswers = ViewBag.SortOrder == "answers_asc" ? "▲" : "▼";
+    ViewBag.Title = "Questions";
+    // Determină ordinea săgeților în funcție de sortarea curentă
+    string sortOrderDate = ViewBag.SortOrder == "date_asc" ? "▲" : "▼";
+    string sortOrderAnswers = ViewBag.SortOrder == "answers_asc" ? "▲" : "▼";
 }
 
 <h3>[@ViewBag.Tag.TagName]</h3>
 <p>@ViewBag.Tag.Description</p>
 
 <div class="d-flex justify-content-end mb-3 me-4">
-	@if (ViewBag.Admin)
-	{
-		<a class="btn alert-info me-2" asp-controller="Tags" asp-action="Show" asp-route-id="@ViewBag.Tag.Id">View Tag</a>
-	}
-	<div class="dropdown">
-		<button class="btn alert-secondary dropdown-toggle me-2" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-			Sort
-		</button>
-		<ul class="dropdown-menu" aria-labelledby="sortDropdown">
-			<li><a class="dropdown-item" href="@Url.Action("Index", new { sortOrder = "date_desc", page = ViewBag.CurrentPage, Id = ViewBag.Tag.Id })">Newest @(ViewBag.SortOrder == "date_desc" ? "▼" : "")</a></li>
-			<li><a class="dropdown-item" href="@Url.Action("Index", new { sortOrder = "date_asc", page = ViewBag.CurrentPage, Id = ViewBag.Tag.Id })">Oldest@(ViewBag.SortOrder == "date_asc" ? "▲" : "")</a></li>
-			<li><a class="dropdown-item" href="@Url.Action("Index", new { sortOrder = "answers_asc", page = ViewBag.CurrentPage, Id = ViewBag.Tag.Id })">Least Answers @(ViewBag.SortOrder == "answers_asc" ? "▲" : "")</a></li>
-			<li><a class="dropdown-item" href="@Url.Action("Index", new { sortOrder = "answers_desc", page = ViewBag.CurrentPage, Id = ViewBag.Tag.Id })">Most Answers @(ViewBag.SortOrder == "answers_desc" ? "▼" : "")</a></li>
-		</ul>
-	</div>
+    @if (ViewBag.Admin)
+    {
+        <a class="btn alert-info me-2" asp-controller="Tags" asp-action="Show" asp-route-id="@ViewBag.Tag.Id">View Tag</a>
+    }
+    <div class="dropdown">
+        <button class="btn alert-secondary dropdown-toggle me-2" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            Sort
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+            <li>
+                <a class="dropdown-item" href="@Url.Action("Index", new { sortOrder = "date_desc", page = ViewBag.CurrentPage, Id = ViewBag.Tag.Id })">Newest @(ViewBag.SortOrder == "date_desc" ? "▼" : "")</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="@Url.Action("Index", new { sortOrder = "date_asc", page = ViewBag.CurrentPage, Id = ViewBag.Tag.Id })">Oldest@(ViewBag.SortOrder == "date_asc" ? "▲" : "")</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="@Url.Action("Index", new { sortOrder = "answers_asc", page = ViewBag.CurrentPage, Id = ViewBag.Tag.Id })">Least Answers @(ViewBag.SortOrder == "answers_asc" ? "▲" : "")</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="@Url.Action("Index", new { sortOrder = "answers_desc", page = ViewBag.CurrentPage, Id = ViewBag.Tag.Id })">Most Answers @(ViewBag.SortOrder == "answers_desc" ? "▼" : "")</a>
+            </li>
+        </ul>
+    </div>
 </div>
 
 <div class="d-flex flex-column gap-3">
-	<div>
-		@foreach (var q in ViewBag.Questions)
-		{
-			<div class="card m-3">
-				<div class="card-body">
-					<h3 class="card-title alert-secondary p-3 rounded-2">
-						<a href="/Questions/Show/@q.Id" style="color: inherit; text-decoration: none;">@q.Title</a>
-					</h3>
-					<div class="card-text description">@Html.Raw(q.Content)</div>
-					<div class="d-flex flex-row mt-5 position-relative">
-						<div>
-							<i class="bi bi-person"></i>
-							<a class="utilizator" href="@Url.Action("Index", "Profile", new { id = q.UserId })">@q.User.UserName</a>
-						</div>
+    <div>
+        @foreach (var q in ViewBag.Questions)
+        {
+            <div class="card m-3">
+                <div class="card-body">
+                    <h3 class="card-title alert-secondary p-3 rounded-2">
+                        <a href="/Questions/Show/@q.Id" style="color: inherit; text-decoration: none;">@q.Title</a>
+                    </h3>
+                    <div class="card-text description">@Html.Raw(q.Content)</div>
+                    <div class="d-flex flex-row mt-5 position-relative">
+                        <div>
+                            <i class="bi bi-person"></i>
+                            <a class="utilizator" href="@Url.Action("Index", "Profile", new { id = q.UserId })">@q.User.UserName</a>
+                        </div>
 
-						<div class="tag-container tag-blue" style="position: absolute; left: 50%; transform: translateX(-50%);"> @q.Tag.TagName</div>
+                        <div class="tag-container tag-blue" style="position: absolute; left: 50%; transform: translateX(-50%);"> @q.Tag.TagName</div>
 
-						<span class="position-absolute end-0 alert-info px-1">@q.Date</span>
+                        <span class="alert-info px-1">
+                            <span class="date">@q.Date.ToShortDateString()</span>
+                            <span class="time">@q.Date.ToShortTimeString()</span>
+                        </span>
 
-					</div>
-				</div>
-			</div>
-		}
-	</div>
-	@if (ViewBag.lastPage != 0)
-	{
-		if (@ViewBag.CurrentPage == 0)
-		{
-			ViewBag.CurrentPage = 1;
-		}
-		<div>
-			<nav aria-label="Page navigation example">
-				<ul class="pagination justify-content-left m-3">
-					<li class="page-item">
-						<a class="page-link" href="@ViewBag.PaginationBaseUrl=1"
-						   aria-label="Previous">
-							<span aria-hidden="true">&laquo;</span>
-						</a>
-					</li>
-					@for (int i = 1; i <= ViewBag.lastPage; i++)
-					{
-						<li class="page-item @(ViewBag.CurrentPage == i ? "active" : "")">
-							<a class="page-link" href="@ViewBag.PaginationBaseUrl=@i">@(i)</a>
-						</li>
-					}
-					<li class="page-item">
-						<a class="page-link"
-						   href="@ViewBag.PaginationBaseUrl=@(ViewBag.lastPage)" aria-label="Next">
-							<span aria-hidden="true">&raquo;</span>
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	}
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    @if (ViewBag.lastPage != 0)
+    {
+        if (@ViewBag.CurrentPage == 0)
+        {
+            ViewBag.CurrentPage = 1;
+        }
+
+        <div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-left m-3">
+                    <li class="page-item">
+                        <a class="page-link" href="@ViewBag.PaginationBaseUrl=1"
+                           aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    @for (int i = 1; i <= ViewBag.lastPage; i++)
+                    {
+                        <li class="page-item @(ViewBag.CurrentPage == i ? "active" : "")">
+                            <a class="page-link" href="@ViewBag.PaginationBaseUrl=@i">@(i)</a>
+                        </li>
+                    }
+                    <li class="page-item">
+                        <a class="page-link"
+                           href="@ViewBag.PaginationBaseUrl=@(ViewBag.lastPage)" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    }
 </div>

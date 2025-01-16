@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Ganss.Xss;
 using System.Text.RegularExpressions;
+using ProiectStackOverflow.Helpers;
 
 namespace ProiectStackOverflow.Controllers
 {
@@ -335,6 +336,11 @@ namespace ProiectStackOverflow.Controllers
             Question question = db.Questions.Find(id);
 
             //var sanitizer = new HtmlSanitizer();
+
+            if (Summernote.IsEditorEmpty(requestQuestion.Content, 0))
+            {
+                ModelState.AddModelError("Content", "Content is required.");
+            }
 
             if (ModelState.IsValid)
             {
