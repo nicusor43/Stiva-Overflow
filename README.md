@@ -2,6 +2,7 @@
 
 **Stiva Overflow** is a collaborative discussion platform designed for users to ask questions, share answers, and explore topics across diverse categories.  
 
+You can test the website [here](https://proiectstackoverflow-92560154672.europe-west3.run.app/).
 ---
 
 ## ✨ Key Features  
