@@ -52,12 +52,12 @@
 1. Update connection string in `appsettings.json`:
 ```json
 "ConnectionStrings": {
-  "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=CollectiveKnowledgeDB;Trusted_Connection=True;"
+  "DefaultConnection": your-server-string
 }
 ```
 2. Apply migrations:
 ```bash
-dotnet ef database update --project CollectiveKnowledge.csproj
+dotnet ef database update
 ```
 *or use Package Manager Console in Visual Studio:*
 ```powershell
